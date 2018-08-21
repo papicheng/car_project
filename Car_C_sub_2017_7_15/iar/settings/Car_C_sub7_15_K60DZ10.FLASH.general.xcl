@@ -1,0 +1,15 @@
+"E:\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"E:\IAR Systems\Embedded Workbench 7.3\arm\bin\armjlink2.dll" 
+
+"G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_C_sub_2017_7_15\iar\FLASH\Exe\Car_C_sub7_15_K60DZ10.out" 
+
+--plugin "E:\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--device_macro "E:\IAR Systems\Embedded Workbench 7.3\arm\config\debugger\Freescale\Kxx.dmac" 
+
+--flash_loader "E:\IAR Systems\Embedded Workbench 7.3\arm\config\flashloader\Freescale\FlashK60Dxxx128K.board" 
+
+
+
+

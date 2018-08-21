@@ -1,0 +1,283 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       23/Aug/2017  10:34:53
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\barrier.c
+#    Command line =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\barrier.c
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -lB
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -o
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "E:\IAR Systems\Embedded
+#        Workbench 7.3\arm\INC\c\DLib_Config_Normal.h" -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\app\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\CPU\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\FUNC\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\driver\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\class\
+#        -Ol -I "E:\IAR Systems\Embedded Workbench 7.3\arm\CMSIS\Include\" -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List\barrier.lst
+#    Object file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj\barrier.o
+#
+###############################################################################
+
+G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\barrier.c
+      1          
+      2          #include "barrier.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void NVIC_DisableIRQ(IRQn_Type)
+   \                     NVIC_DisableIRQ: (+1)
+   \   00000000   0x2101             MOVS     R1,#+1
+   \   00000002   0xF010 0x021F      ANDS     R2,R0,#0x1F
+   \   00000006   0x4091             LSLS     R1,R1,R2
+   \   00000008   0x....             LDR.N    R2,??DataTable3  ;; 0xe000e180
+   \   0000000A   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000000C   0x0940             LSRS     R0,R0,#+5
+   \   0000000E   0xF842 0x1020      STR      R1,[R2, R0, LSL #+2]
+   \   00000012   0x4770             BX       LR               ;; return
+      3          #include "common.h"
+      4          
+      5          
+      6          //PE1---PA14, PD9---PC14
+
+   \                                 In section .text, align 2, keep-with-next
+      7          void barrier_init(void)
+      8          {
+   \                     barrier_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      9            static GPIO_InitTypeDef barrierL_struct;//左障碍
+     10            barrierL_struct.GPIO_PTx = PTD;    
+   \   00000002   0x....             LDR.N    R0,??DataTable3_1  ;; 0x400ff0c0
+   \   00000004   0x....             LDR.N    R1,??DataTable3_2
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     11            barrierL_struct.GPIO_Pins = GPIO_Pin9|GPIO_Pin8;   
+   \   00000008   0xF44F 0x7040      MOV      R0,#+768
+   \   0000000C   0x....             LDR.N    R1,??DataTable3_2
+   \   0000000E   0x6048             STR      R0,[R1, #+4]
+     12            barrierL_struct.GPIO_Dir = DIR_INPUT;        //输入
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x....             LDR.N    R1,??DataTable3_2
+   \   00000014   0x7308             STRB     R0,[R1, #+12]
+     13            barrierL_struct.GPIO_PinControl = IRQC_RI |INPUT_PULL_DOWN;//上升沿触发中断
+   \   00000016   0x....             LDR.N    R0,??DataTable3_3  ;; 0x90002
+   \   00000018   0x....             LDR.N    R1,??DataTable3_2
+   \   0000001A   0x6088             STR      R0,[R1, #+8]
+     14            barrierL_struct.GPIO_Isr = PTD_isr;        //中断函数
+   \   0000001C   0x.... 0x....      ADR.W    R0,PTD_isr
+   \   00000020   0x....             LDR.N    R1,??DataTable3_2
+   \   00000022   0x6108             STR      R0,[R1, #+16]
+     15            LPLD_GPIO_Init(barrierL_struct);
+   \   00000024   0x....             LDR.N    R1,??DataTable3_2
+   \   00000026   0xB084             SUB      SP,SP,#+16
+   \   00000028   0x4668             MOV      R0,SP
+   \   0000002A   0x2214             MOVS     R2,#+20
+   \   0000002C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000030   0xBC0F             POP      {R0-R3}
+   \   00000032   0x.... 0x....      BL       LPLD_GPIO_Init
+     16            disable_irq(PORTD_IRQn);
+   \   00000036   0x205A             MOVS     R0,#+90
+   \   00000038   0x.... 0x....      BL       NVIC_DisableIRQ
+     17            
+     18            static GPIO_InitTypeDef barrierR_struct;//右障碍
+     19            barrierR_struct.GPIO_PTx = PTE;    
+   \   0000003C   0x....             LDR.N    R0,??DataTable3_4  ;; 0x400ff100
+   \   0000003E   0x....             LDR.N    R1,??DataTable3_5
+   \   00000040   0x6008             STR      R0,[R1, #+0]
+     20            barrierR_struct.GPIO_Pins = GPIO_Pin27|GPIO_Pin28;   
+   \   00000042   0xF05F 0x50C0      MOVS     R0,#+402653184
+   \   00000046   0x....             LDR.N    R1,??DataTable3_5
+   \   00000048   0x6048             STR      R0,[R1, #+4]
+     21            barrierR_struct.GPIO_Dir = DIR_INPUT;        //输入
+   \   0000004A   0x2000             MOVS     R0,#+0
+   \   0000004C   0x....             LDR.N    R1,??DataTable3_5
+   \   0000004E   0x7308             STRB     R0,[R1, #+12]
+     22            barrierR_struct.GPIO_PinControl = IRQC_RI |INPUT_PULL_DOWN;//上升沿触发中断
+   \   00000050   0x....             LDR.N    R0,??DataTable3_3  ;; 0x90002
+   \   00000052   0x....             LDR.N    R1,??DataTable3_5
+   \   00000054   0x6088             STR      R0,[R1, #+8]
+     23            barrierR_struct.GPIO_Isr = PTE_isr;        //中断函数
+   \   00000056   0x.... 0x....      ADR.W    R0,PTE_isr
+   \   0000005A   0x....             LDR.N    R1,??DataTable3_5
+   \   0000005C   0x6108             STR      R0,[R1, #+16]
+     24            LPLD_GPIO_Init(barrierR_struct);
+   \   0000005E   0x....             LDR.N    R1,??DataTable3_5
+   \   00000060   0xB084             SUB      SP,SP,#+16
+   \   00000062   0x4668             MOV      R0,SP
+   \   00000064   0x2214             MOVS     R2,#+20
+   \   00000066   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000006A   0xBC0F             POP      {R0-R3}
+   \   0000006C   0x.... 0x....      BL       LPLD_GPIO_Init
+     25            disable_irq(PORTE_IRQn);
+   \   00000070   0x205B             MOVS     R0,#+91
+   \   00000072   0x.... 0x....      BL       NVIC_DisableIRQ
+     26            
+     27            
+     28          }
+   \   00000076   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??barrierL_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+   \                     ??barrierR_struct:
+   \   00000000                      DS8 20
+     29          
+
+   \                                 In section .text, align 4, keep-with-next
+     30          void PTD_isr(void)//车右转
+     31          {
+     32            if(LPLD_GPIO_IsPinxExt(PORTD, GPIO_Pin9))      //左边发现障碍
+   \                     PTD_isr: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable3_6  ;; 0x4004c0a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x0580             LSLS     R0,R0,#+22
+   \   00000006   0xD503             BPL.N    ??PTD_isr_0
+     33            {
+     34              LPLD_GPIO_ClearIntFlag(PORTD);
+   \   00000008   0xF05F 0x30FF      MOVS     R0,#-1
+   \   0000000C   0x....             LDR.N    R1,??DataTable3_6  ;; 0x4004c0a0
+   \   0000000E   0x6008             STR      R0,[R1, #+0]
+     35              /*while(LPLD_GPIO_Input_b(PTD, 9)!=0)
+     36              {
+     37                LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,5350 );//中值为4900,不打死,直到从机质低电平才结束次循环
+     38              }*/
+     39            }
+     40            
+     41          }
+   \                     ??PTD_isr_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+     42          void PTE_isr(void)//车左转
+     43          {
+     44            if(LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin1))      //右边发现障碍
+   \                     PTE_isr: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable3_7  ;; 0x4004d0a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x0780             LSLS     R0,R0,#+30
+   \   00000006   0xD503             BPL.N    ??PTE_isr_0
+     45            {
+     46              LPLD_GPIO_ClearIntFlag(PORTE);
+   \   00000008   0xF05F 0x30FF      MOVS     R0,#-1
+   \   0000000C   0x....             LDR.N    R1,??DataTable3_7  ;; 0x4004d0a0
+   \   0000000E   0x6008             STR      R0,[R1, #+0]
+     47              /*while(LPLD_GPIO_Input_b(PTE, 1)!=0)
+     48              {
+     49                LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,4350 );  
+     50              }*/
+     51            }
+     52          }
+   \                     ??PTE_isr_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0xE000E180         DC32     0xe000e180
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \   00000000   0x400FF0C0         DC32     0x400ff0c0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \   00000000   0x........         DC32     ??barrierL_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \   00000000   0x00090002         DC32     0x90002
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \   00000000   0x........         DC32     ??barrierR_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_6:
+   \   00000000   0x4004C0A0         DC32     0x4004c0a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_7:
+   \   00000000   0x4004D0A0         DC32     0x4004d0a0
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   NVIC_DisableIRQ
+       0   PTD_isr
+       0   PTE_isr
+      24   barrier_init
+         8   -> LPLD_GPIO_Init
+         8   -> NVIC_DisableIRQ
+        24   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       4  ??DataTable3_7
+      20  NVIC_DisableIRQ
+      18  PTD_isr
+      18  PTE_isr
+      20  barrierL_struct
+      20  barrierR_struct
+     120  barrier_init
+
+ 
+  40 bytes in section .bss
+ 208 bytes in section .text
+ 
+ 208 bytes of CODE memory
+  40 bytes of DATA memory
+
+Errors: none
+Warnings: none

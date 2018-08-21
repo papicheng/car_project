@@ -1,0 +1,2911 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       23/Aug/2017  10:35:13
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\timer.c
+#    Command line =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\timer.c
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -lB
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -o
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "E:\IAR Systems\Embedded
+#        Workbench 7.3\arm\INC\c\DLib_Config_Normal.h" -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\app\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\CPU\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\FUNC\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\driver\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\class\
+#        -Ol -I "E:\IAR Systems\Embedded Workbench 7.3\arm\CMSIS\Include\" -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List\timer.lst
+#    Object file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj\timer.o
+#
+###############################################################################
+
+G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\timer.c
+      1            
+      2          #include "common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void NVIC_DisableIRQ(IRQn_Type)
+   \                     NVIC_DisableIRQ: (+1)
+   \   00000000   0x2101             MOVS     R1,#+1
+   \   00000002   0xF010 0x021F      ANDS     R2,R0,#0x1F
+   \   00000006   0x4091             LSLS     R1,R1,R2
+   \   00000008   0x.... 0x....      LDR.W    R2,??DataTable7  ;; 0xe000e180
+   \   0000000C   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000000E   0x0940             LSRS     R0,R0,#+5
+   \   00000010   0xF842 0x1020      STR      R1,[R2, R0, LSL #+2]
+   \   00000014   0x4770             BX       LR               ;; return
+      3          #include "timer.h"
+      4          #include "camera_test.h"
+      5          #include "infrared.h"
+      6          #include "Freecars.h"
+      7          #include "math.h"
+      8          #include "Heb_learning.h"
+      9          #include "botton.h"
+     10          
+     11          extern uint8 code_switch;  
+     12          
+
+   \                                 In section .bss, align 4
+     13          PID_TypeDef Turn_PID,Turn_close_PID,Speed_PID;
+   \                     Turn_PID:
+   \   00000000                      DS8 44
+
+   \                                 In section .bss, align 4
+   \                     Turn_close_PID:
+   \   00000000                      DS8 44
+
+   \                                 In section .bss, align 4
+   \                     Speed_PID:
+   \   00000000                      DS8 44
+     14          
+
+   \                                 In section .bss, align 2
+     15          short qd_result;
+   \                     qd_result:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     16          int16 speed;
+   \                     speed:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+     17          uint8 car_stop_flag=0; //调参数时停车标志
+   \                     car_stop_flag:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 2
+     18          int16 highspeed=400,lowspeed=250,turnspeed=200;
+   \                     highspeed:
+   \   00000000   0x0190             DC16 400
+
+   \                                 In section .data, align 2
+   \                     lowspeed:
+   \   00000000   0x00FA             DC16 250
+
+   \                                 In section .data, align 2
+   \                     turnspeed:
+   \   00000000   0x00C8             DC16 200
+
+   \                                 In section .bss, align 2
+     19          int16 SetSpeed=0;
+   \                     SetSpeed:
+   \   00000000                      DS8 2
+
+   \                                 In section .data, align 1
+     20          uint8 SetCenterX=85;//用于偏航
+   \                     SetCenterX:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+     21          uint8 Acenter=85;  //实际中心
+   \                     Acenter:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+     22          uint8 lph1=85,lph2=85,lph3=85,lph4=85,lph5=85,lph6=85,lph7=85,rph1=85,rph2=85,rph3=85,rph4=85,rph5=85,rph6=85,rph7=85;
+   \                     lph1:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph2:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph3:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph4:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph5:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph6:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     lph7:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph1:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph2:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph3:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph4:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph5:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph6:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .data, align 1
+   \                     rph7:
+   \   00000000   0x55               DC8 85
+
+   \                                 In section .bss, align 4
+     23          uint8 L_R_judge[50][2];
+   \                     L_R_judge:
+   \   00000000                      DS8 100
+     24          
+     25          //第一位表示当车靠近信标后左偏航(1)还是右偏航(0)
+     26          //第二位表示信标熄灭并且看不到下一个信标时左转(1)还是右转(0)  直行是2
+     27          
+
+   \                                 In section .data, align 4
+     28          float atime=100;  //PID控制
+   \                     atime:
+   \   00000000   0x42C80000         DC32 42C80000H
+
+   \                                 In section .bss, align 1
+     29          uint8 xbnum;
+   \                     xbnum:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+     30          int16 s5[10]={0};  //高速判定数组
+   \                     s5:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 1
+     31          int8 i=0;  //用于采集10次舵机打角 
+   \                     i:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 2
+     32          int16 ss,dc_judge=30;   //高速判定数组均值  倒车控制
+   \                     ss:
+   \   00000000                      DS8 2
+
+   \                                 In section .data, align 2
+   \                     dc_judge:
+   \   00000000   0x001E             DC16 30
+
+   \                                 In section .bss, align 1
+     33          uint8 sflag,rol=1,passflag;  //rol为1,右偏航,为0,左偏航
+   \                     sflag:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 1
+   \                     rol:
+   \   00000000   0x01               DC8 1
+
+   \                                 In section .bss, align 1
+   \                     passflag:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 2
+     34          uint16 acce=70,stop=300; //高速阈值 停车标志
+   \                     acce:
+   \   00000000   0x0046             DC16 70
+
+   \                                 In section .data, align 2
+   \                     stop:
+   \   00000000   0x012C             DC16 300
+
+   \                                 In section .bss, align 4
+     35          uint32 turn_little[2],turn_large[2];//0左 1右 避障打角
+   \                     turn_little:
+   \   00000000                      DS8 8
+
+   \                                 In section .bss, align 4
+   \                     turn_large:
+   \   00000000                      DS8 8
+
+   \                                 In section .bss, align 1
+     36          uint8 lr_lock;//首次看到灯的位置决定偏航方向
+   \                     lr_lock:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     37          uint8 zero_lock1,zero_lock2;//锁定，持续设定速度为低速，用于减速
+   \                     zero_lock1:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+   \                     zero_lock2:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     38          uint8 ph_lock1,ph_lock2;
+   \                     ph_lock1:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+   \                     ph_lock2:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     39          uint8 bz_flag;//避障标志
+   \                     bz_flag:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     40          uint8 del; //避障偏航解锁延时去抖
+   \                     del:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 1
+     41          uint8 bz_end=12;  //y坐标
+   \                     bz_end:
+   \   00000000   0x0C               DC8 12
+
+   \                                 In section .data, align 1
+     42          uint8 brake_start=50; //y坐标
+   \                     brake_start:
+   \   00000000   0x32               DC8 50
+
+   \                                 In section .data, align 2
+     43          int16 bz_speed=200;
+   \                     bz_speed:
+   \   00000000   0x00C8             DC16 200
+     44          
+     45          /*----------------PID初始化-----------------*/
+
+   \                                 In section .text, align 2, keep-with-next
+     46          void PID_Init(void)
+     47          {  
+     48            Turn_PID.P=15;    //15      //转向的PID
+   \                     PID_Init: (+1)
+   \   00000000   0x.... 0x....      LDR.W    R0,??DataTable5  ;; 0x41700000
+   \   00000004   0x.... 0x....      LDR.W    R1,??DataTable5_1
+   \   00000008   0x6008             STR      R0,[R1, #+0]
+     49            Turn_PID.I=0;
+   \   0000000A   0x2000             MOVS     R0,#+0
+   \   0000000C   0x.... 0x....      LDR.W    R1,??DataTable5_1
+   \   00000010   0x6048             STR      R0,[R1, #+4]
+     50            Turn_PID.D=20;       //5 
+   \   00000012   0x.... 0x....      LDR.W    R0,??DataTable5_2  ;; 0x41a00000
+   \   00000016   0x.... 0x....      LDR.W    R1,??DataTable5_1
+   \   0000001A   0x6088             STR      R0,[R1, #+8]
+     51            Turn_PID.iLimit=0;
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0x.... 0x....      LDR.W    R1,??DataTable5_1
+   \   00000022   0x6208             STR      R0,[R1, #+32]
+     52            
+     53            Turn_close_PID.P=10;           //10       //转向的PID
+   \   00000024   0x.... 0x....      LDR.W    R0,??DataTable5_3  ;; 0x41200000
+   \   00000028   0x.... 0x....      LDR.W    R1,??DataTable5_4
+   \   0000002C   0x6008             STR      R0,[R1, #+0]
+     54            Turn_close_PID.I=0;
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x.... 0x....      LDR.W    R1,??DataTable5_4
+   \   00000034   0x6048             STR      R0,[R1, #+4]
+     55            Turn_close_PID.D=10;       //10 
+   \   00000036   0x.... 0x....      LDR.W    R0,??DataTable5_3  ;; 0x41200000
+   \   0000003A   0x.... 0x....      LDR.W    R1,??DataTable5_4
+   \   0000003E   0x6088             STR      R0,[R1, #+8]
+     56            Turn_close_PID.iLimit=0;
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x.... 0x....      LDR.W    R1,??DataTable5_4
+   \   00000046   0x6208             STR      R0,[R1, #+32]
+     57            
+     58            Speed_PID.P=90;//50  90             //速度PID
+   \   00000048   0x.... 0x....      LDR.W    R0,??DataTable5_5  ;; 0x42b40000
+   \   0000004C   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   00000050   0x6008             STR      R0,[R1, #+0]
+     59            Speed_PID.I=10;//10
+   \   00000052   0x.... 0x....      LDR.W    R0,??DataTable5_3  ;; 0x41200000
+   \   00000056   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   0000005A   0x6048             STR      R0,[R1, #+4]
+     60            Speed_PID.D=1;//1 2
+   \   0000005C   0xF05F 0x507E      MOVS     R0,#+1065353216
+   \   00000060   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   00000064   0x6088             STR      R0,[R1, #+8]
+     61            Speed_PID.Desired=0;                  
+   \   00000066   0x2000             MOVS     R0,#+0
+   \   00000068   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   0000006C   0x60C8             STR      R0,[R1, #+12]
+     62            Speed_PID.Error=0;
+   \   0000006E   0x2000             MOVS     R0,#+0
+   \   00000070   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   00000074   0x6108             STR      R0,[R1, #+16]
+     63            Speed_PID.PreError=0;
+   \   00000076   0x2000             MOVS     R0,#+0
+   \   00000078   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   0000007C   0x6148             STR      R0,[R1, #+20]
+     64            Speed_PID.PrePreError=0;
+   \   0000007E   0x2000             MOVS     R0,#+0
+   \   00000080   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   00000084   0x6188             STR      R0,[R1, #+24]
+     65            Speed_PID.Integer=0;                 //积分项             
+   \   00000086   0x2000             MOVS     R0,#+0
+   \   00000088   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   0000008C   0x61C8             STR      R0,[R1, #+28]
+     66            Speed_PID.iLimit=0;                  //积分限值
+   \   0000008E   0x2000             MOVS     R0,#+0
+   \   00000090   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   00000094   0x6208             STR      R0,[R1, #+32]
+     67            Speed_PID.Deriv=0;                   //微分项
+   \   00000096   0x2000             MOVS     R0,#+0
+   \   00000098   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   0000009C   0x6248             STR      R0,[R1, #+36]
+     68            Speed_PID.Output=0;
+   \   0000009E   0x2000             MOVS     R0,#+0
+   \   000000A0   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   000000A4   0x6288             STR      R0,[R1, #+40]
+     69            Speed_PID.iLimit=3000;
+   \   000000A6   0x.... 0x....      LDR.W    R0,??DataTable5_6  ;; 0x453b8000
+   \   000000AA   0x.... 0x....      LDR.W    R1,??DataTable7_1
+   \   000000AE   0x6208             STR      R0,[R1, #+32]
+     70          }
+   \   000000B0   0x4770             BX       LR               ;; return
+     71          
+
+   \                                 In section .text, align 2, keep-with-next
+     72          void pit_init(void)
+     73          {
+   \                     pit_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     74            static PIT_InitTypeDef pit0_init_struct; //10ms定时中断
+     75            pit0_init_struct.PIT_Pitx = PIT0;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x.... 0x....      LDR.W    R1,??DataTable8
+   \   00000008   0x7008             STRB     R0,[R1, #+0]
+     76            pit0_init_struct.PIT_PeriodMs =10;     //
+   \   0000000A   0x200A             MOVS     R0,#+10
+   \   0000000C   0x.... 0x....      LDR.W    R1,??DataTable8
+   \   00000010   0x6088             STR      R0,[R1, #+8]
+     77            pit0_init_struct.PIT_Isr = pit0_isr;   //设置中断函数
+   \   00000012   0x.... 0x....      ADR.W    R0,pit0_isr
+   \   00000016   0x.... 0x....      LDR.W    R1,??DataTable8
+   \   0000001A   0x6108             STR      R0,[R1, #+16]
+     78            LPLD_PIT_Init(pit0_init_struct);  
+   \   0000001C   0x.... 0x....      LDR.W    R1,??DataTable8
+   \   00000020   0xB084             SUB      SP,SP,#+16
+   \   00000022   0x4668             MOV      R0,SP
+   \   00000024   0x2214             MOVS     R2,#+20
+   \   00000026   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002A   0xBC0F             POP      {R0-R3}
+   \   0000002C   0x.... 0x....      BL       LPLD_PIT_Init
+     79            disable_irq(PIT0_IRQn);
+   \   00000030   0x2044             MOVS     R0,#+68
+   \   00000032   0x.... 0x....      BL       NVIC_DisableIRQ
+     80          }
+   \   00000036   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??pit0_init_struct:
+   \   00000000                      DS8 20
+     81          
+     82          
+
+   \                                 In section .text, align 4, keep-with-next
+     83          void pit0_isr(void)  
+     84          {
+   \                     pit0_isr: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     85            Calculate_Middle_Point();//信标中点计算
+   \   00000002   0x.... 0x....      BL       Calculate_Middle_Point
+     86            /*------------------转向部分---------------------------------*/
+     87            if(lr_lock==0 && !NOpoint && bz_flag==0)  //无图后第一次看到信标或者避障后偏航方向设定
+   \   00000006   0x.... 0x....      LDR.W    R0,??DataTable7_2
+   \   0000000A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000000C   0x2800             CMP      R0,#+0
+   \   0000000E   0xD11E             BNE.N    ??pit0_isr_0
+   \   00000010   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   00000014   0x7800             LDRB     R0,[R0, #+0]
+   \   00000016   0x2800             CMP      R0,#+0
+   \   00000018   0xD119             BNE.N    ??pit0_isr_0
+   \   0000001A   0x.... 0x....      LDR.W    R0,??DataTable7_3
+   \   0000001E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000020   0x2800             CMP      R0,#+0
+   \   00000022   0xD114             BNE.N    ??pit0_isr_0
+     88            {
+     89              lr_lock=1;//锁定偏航方向
+   \   00000024   0x2001             MOVS     R0,#+1
+   \   00000026   0x.... 0x....      LDR.W    R1,??DataTable7_2
+   \   0000002A   0x7008             STRB     R0,[R1, #+0]
+     90              if(real_pointx>Acenter)
+   \   0000002C   0x.... 0x....      LDR.W    R0,??DataTable7_4
+   \   00000030   0x7800             LDRB     R0,[R0, #+0]
+   \   00000032   0x.... 0x....      LDR.W    R1,??DataTable6_1
+   \   00000036   0x7809             LDRB     R1,[R1, #+0]
+   \   00000038   0x4288             CMP      R0,R1
+   \   0000003A   0xD204             BCS.N    ??pit0_isr_1
+     91                rol=0;  //左偏航
+   \   0000003C   0x2000             MOVS     R0,#+0
+   \   0000003E   0x.... 0x....      LDR.W    R1,??DataTable6_2
+   \   00000042   0x7008             STRB     R0,[R1, #+0]
+   \   00000044   0xE003             B.N      ??pit0_isr_0
+     92              else
+     93                rol=1; //右偏航
+   \                     ??pit0_isr_1: (+1)
+   \   00000046   0x2001             MOVS     R0,#+1
+   \   00000048   0x.... 0x....      LDR.W    R1,??DataTable6_2
+   \   0000004C   0x7008             STRB     R0,[R1, #+0]
+     94            }
+     95            Middle_Point_Configure();  //偏航中点设定
+   \                     ??pit0_isr_0: (+1)
+   \   0000004E   0x.... 0x....      BL       Middle_Point_Configure
+     96            Turn_PID_Cal();//转向PID计算,得到Turn_PID.Output
+   \   00000052   0x.... 0x....      BL       Turn_PID_Cal
+     97            /*
+     98            //避障打角设定
+     99            turn_little[0]=(uint32)Turn_PID.Output-300;  
+    100            turn_little[1]=(uint32)Turn_PID.Output+300;
+    101            turn_large[0]=(uint32)Turn_PID.Output-500;
+    102            turn_large[1]=(uint32)Turn_PID.Output+500;
+    103            //限幅
+    104            turn_little[0]=(turn_little[0]<SerLeftMin)?SerLeftMin:turn_little[0];
+    105            turn_little[1]=(turn_little[1]>SerRightMax)?SerRightMax:turn_little[1];
+    106            turn_large[0]=(turn_large[0]<SerLeftMin)?SerLeftMin:turn_large[0];
+    107            turn_large[1]=(turn_large[1]>SerRightMax)?SerRightMax:turn_large[1];
+    108            */
+    109            turn_little[0]=SerMid-300;  
+   \   00000056   0xF241 0x00CC      MOVW     R0,#+4300
+   \   0000005A   0x.... 0x....      LDR.W    R1,??DataTable6_3
+   \   0000005E   0x6008             STR      R0,[R1, #+0]
+    110            turn_little[1]=SerMid+300;
+   \   00000060   0xF241 0x3024      MOVW     R0,#+4900
+   \   00000064   0x.... 0x....      LDR.W    R1,??DataTable6_3
+   \   00000068   0x6048             STR      R0,[R1, #+4]
+    111            turn_large[0]=SerMid-500;
+   \   0000006A   0xF241 0x0004      MOVW     R0,#+4100
+   \   0000006E   0x.... 0x....      LDR.W    R1,??DataTable6_4
+   \   00000072   0x6008             STR      R0,[R1, #+0]
+    112            turn_large[1]=SerMid+500; 
+   \   00000074   0xF241 0x30EC      MOVW     R0,#+5100
+   \   00000078   0x.... 0x....      LDR.W    R1,??DataTable6_4
+   \   0000007C   0x6048             STR      R0,[R1, #+4]
+    113            
+    114            //转向输出
+    115            if(dc_judge<0 && dc_judge>-40 && code_switch==16) //倒车方向控制（竞赛），优先级最高
+   \   0000007E   0x.... 0x....      LDR.W    R0,??DataTable9
+   \   00000082   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000086   0x3027             ADDS     R0,R0,#+39
+   \   00000088   0x2827             CMP      R0,#+39
+   \   0000008A   0xD20C             BCS.N    ??pit0_isr_2
+   \   0000008C   0x.... 0x....      LDR.W    R0,??DataTable7_5
+   \   00000090   0x7800             LDRB     R0,[R0, #+0]
+   \   00000092   0x2810             CMP      R0,#+16
+   \   00000094   0xD107             BNE.N    ??pit0_isr_2
+    116              LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,SerLeftMin);
+   \   00000096   0xF640 0x6274      MOVW     R2,#+3700
+   \   0000009A   0x2100             MOVS     R1,#+0
+   \   0000009C   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   000000A0   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   000000A4   0xE0A6             B.N      ??pit0_isr_3
+    117            
+    118            else if(!NOpoint)  //有图转向输出
+   \                     ??pit0_isr_2: (+1)
+   \   000000A6   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   000000AA   0x7800             LDRB     R0,[R0, #+0]
+   \   000000AC   0x2800             CMP      R0,#+0
+   \   000000AE   0xD15C             BNE.N    ??pit0_isr_4
+    119            {
+    120              stop=300; //3s停车变量复位
+   \   000000B0   0xF44F 0x7096      MOV      R0,#+300
+   \   000000B4   0x.... 0x....      LDR.W    R1,??DataTable7_7
+   \   000000B8   0x8008             STRH     R0,[R1, #+0]
+    121              if(real_pointy < bz_end )  //避障范围避障转向输出
+   \   000000BA   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000000BE   0x7800             LDRB     R0,[R0, #+0]
+   \   000000C0   0x.... 0x....      LDR.W    R1,??DataTable7_8
+   \   000000C4   0x7809             LDRB     R1,[R1, #+0]
+   \   000000C6   0x4288             CMP      R0,R1
+   \   000000C8   0xD243             BCS.N    ??pit0_isr_5
+    122              {
+    123                //远避障小打角
+    124                if( PTE27_I == 1)//左障碍   E27-----A15A
+   \   000000CA   0x.... 0x....      LDR.W    R0,??DataTable7_9  ;; 0x43fe226c
+   \   000000CE   0x6800             LDR      R0,[R0, #+0]
+   \   000000D0   0x2801             CMP      R0,#+1
+   \   000000D2   0xD108             BNE.N    ??pit0_isr_6
+    125                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,turn_little[1] ); 
+   \   000000D4   0x.... 0x....      LDR.W    R0,??DataTable6_3
+   \   000000D8   0x6842             LDR      R2,[R0, #+4]
+   \   000000DA   0x2100             MOVS     R1,#+0
+   \   000000DC   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   000000E0   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   000000E4   0xE086             B.N      ??pit0_isr_3
+    126                else if(PTE28_I==1)//右障碍   E28-----A14A
+   \                     ??pit0_isr_6: (+1)
+   \   000000E6   0x.... 0x....      LDR.W    R0,??DataTable7_10  ;; 0x43fe2270
+   \   000000EA   0x6800             LDR      R0,[R0, #+0]
+   \   000000EC   0x2801             CMP      R0,#+1
+   \   000000EE   0xD108             BNE.N    ??pit0_isr_7
+    127                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,turn_little[0] );
+   \   000000F0   0x.... 0x....      LDR.W    R0,??DataTable6_3
+   \   000000F4   0x6802             LDR      R2,[R0, #+0]
+   \   000000F6   0x2100             MOVS     R1,#+0
+   \   000000F8   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   000000FC   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000100   0xE078             B.N      ??pit0_isr_3
+    128                //近避障大打角
+    129                else if(PTD8_I == 1 )//左障碍
+   \                     ??pit0_isr_7: (+1)
+   \   00000102   0x.... 0x....      LDR.W    R0,??DataTable7_11  ;; 0x43fe1a20
+   \   00000106   0x6800             LDR      R0,[R0, #+0]
+   \   00000108   0x2801             CMP      R0,#+1
+   \   0000010A   0xD108             BNE.N    ??pit0_isr_8
+    130                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,turn_large[1] );
+   \   0000010C   0x.... 0x....      LDR.W    R0,??DataTable6_4
+   \   00000110   0x6842             LDR      R2,[R0, #+4]
+   \   00000112   0x2100             MOVS     R1,#+0
+   \   00000114   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   00000118   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   0000011C   0xE06A             B.N      ??pit0_isr_3
+    131                else if(PTD9_I == 1 )//右障碍
+   \                     ??pit0_isr_8: (+1)
+   \   0000011E   0x.... 0x....      LDR.W    R0,??DataTable7_12  ;; 0x43fe1a24
+   \   00000122   0x6800             LDR      R0,[R0, #+0]
+   \   00000124   0x2801             CMP      R0,#+1
+   \   00000126   0xD108             BNE.N    ??pit0_isr_9
+    132                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,turn_large[0] );
+   \   00000128   0x.... 0x....      LDR.W    R0,??DataTable6_4
+   \   0000012C   0x6802             LDR      R2,[R0, #+0]
+   \   0000012E   0x2100             MOVS     R1,#+0
+   \   00000130   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   00000134   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000138   0xE05C             B.N      ??pit0_isr_3
+    133                else
+    134                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,(uint32)Turn_PID.Output );//转向控制
+   \                     ??pit0_isr_9: (+1)
+   \   0000013A   0x.... 0x....      LDR.W    R0,??DataTable5_1
+   \   0000013E   0x6A80             LDR      R0,[R0, #+40]
+   \   00000140   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000144   0x0002             MOVS     R2,R0
+   \   00000146   0x2100             MOVS     R1,#+0
+   \   00000148   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   0000014C   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000150   0xE050             B.N      ??pit0_isr_3
+    135              } 
+    136              else  
+    137                LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,(uint32)Turn_PID.Output );//有图无障碍向灯偏航行驶 
+   \                     ??pit0_isr_5: (+1)
+   \   00000152   0x.... 0x....      LDR.W    R0,??DataTable5_1
+   \   00000156   0x6A80             LDR      R0,[R0, #+40]
+   \   00000158   0x.... 0x....      BL       __aeabi_f2uiz
+   \   0000015C   0x0002             MOVS     R2,R0
+   \   0000015E   0x2100             MOVS     R1,#+0
+   \   00000160   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   00000164   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000168   0xE044             B.N      ??pit0_isr_3
+    138            }
+    139            
+    140            else if(NOpoint && move_flag)//看不到图并且已经发车时转向输出
+   \                     ??pit0_isr_4: (+1)
+   \   0000016A   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   0000016E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000170   0x2800             CMP      R0,#+0
+   \   00000172   0xD03F             BEQ.N    ??pit0_isr_3
+   \   00000174   0x.... 0x....      LDR.W    R0,??DataTable8_2
+   \   00000178   0x7800             LDRB     R0,[R0, #+0]
+   \   0000017A   0x2800             CMP      R0,#+0
+   \   0000017C   0xD03A             BEQ.N    ??pit0_isr_3
+    141            {
+    142              zero_lock1=0; //无图解除低速锁定
+   \   0000017E   0x2000             MOVS     R0,#+0
+   \   00000180   0x.... 0x....      LDR.W    R1,??DataTable7_13
+   \   00000184   0x7008             STRB     R0,[R1, #+0]
+    143              zero_lock2=0; //无图解除低速锁定
+   \   00000186   0x2000             MOVS     R0,#+0
+   \   00000188   0x.... 0x....      LDR.W    R1,??DataTable8_3
+   \   0000018C   0x7008             STRB     R0,[R1, #+0]
+    144              lr_lock=0;   //偏航设定解锁
+   \   0000018E   0x2000             MOVS     R0,#+0
+   \   00000190   0x.... 0x....      LDR.W    R1,??DataTable7_2
+   \   00000194   0x7008             STRB     R0,[R1, #+0]
+    145              ph_lock1=0;
+   \   00000196   0x2000             MOVS     R0,#+0
+   \   00000198   0x.... 0x....      LDR.W    R1,??DataTable9_1
+   \   0000019C   0x7008             STRB     R0,[R1, #+0]
+    146              ph_lock2=0;
+   \   0000019E   0x2000             MOVS     R0,#+0
+   \   000001A0   0x.... 0x....      LDR.W    R1,??DataTable9_2
+   \   000001A4   0x7008             STRB     R0,[R1, #+0]
+    147              if(code_switch==16)  //竞赛
+   \   000001A6   0x.... 0x....      LDR.W    R0,??DataTable7_5
+   \   000001AA   0x7800             LDRB     R0,[R0, #+0]
+   \   000001AC   0x2810             CMP      R0,#+16
+   \   000001AE   0xD10D             BNE.N    ??pit0_isr_10
+    148              {
+    149                if(stop--==0)  //已发车并一定时间无图 停车
+   \   000001B0   0x.... 0x....      LDR.W    R0,??DataTable7_7
+   \   000001B4   0x8800             LDRH     R0,[R0, #+0]
+   \   000001B6   0x1E41             SUBS     R1,R0,#+1
+   \   000001B8   0x.... 0x....      LDR.W    R2,??DataTable7_7
+   \   000001BC   0x8011             STRH     R1,[R2, #+0]
+   \   000001BE   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000001C0   0x2800             CMP      R0,#+0
+   \   000001C2   0xD103             BNE.N    ??pit0_isr_10
+    150                  car_stop_flag=1;  //此标志设定速度为0，且优先级最高
+   \   000001C4   0x2001             MOVS     R0,#+1
+   \   000001C6   0x.... 0x....      LDR.W    R1,??DataTable7_14
+   \   000001CA   0x7008             STRB     R0,[R1, #+0]
+    151              }
+    152              /*
+    153              //无图避障
+    154              //远障碍
+    155              if(PTE27_I == 1 )
+    156                LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,SerRightMax );//左障碍
+    157              else if(PTE28_I==1)
+    158                LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,SerLeftMin );//右障碍
+    159              //近障碍
+    160              else if(PTD8_I==1)
+    161              {
+    162                LPLD_FTM_PWM_ChangeDuty(FTM1,  FTM_Ch0,SerRightMax );//左障碍
+    163                LPLD_LPTMR_DelayMs( 100 );
+    164              }
+    165              else if(PTD9_I==1)
+    166              {
+    167                LPLD_FTM_PWM_ChangeDuty(FTM1,  FTM_Ch0,SerLeftMin );//右障碍
+    168                
+    169                LPLD_LPTMR_DelayMs(100 );  //保持转向100ms
+    170              }
+    171              else   */
+    172                if(rol==1)
+   \                     ??pit0_isr_10: (+1)
+   \   000001CC   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   000001D0   0x7800             LDRB     R0,[R0, #+0]
+   \   000001D2   0x2801             CMP      R0,#+1
+   \   000001D4   0xD107             BNE.N    ??pit0_isr_11
+    173                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,SerLeftMin);//左转
+   \   000001D6   0xF640 0x6274      MOVW     R2,#+3700
+   \   000001DA   0x2100             MOVS     R1,#+0
+   \   000001DC   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   000001E0   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   000001E4   0xE006             B.N      ??pit0_isr_3
+    174                else
+    175                  LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0,SerRightMax);//右转
+   \                     ??pit0_isr_11: (+1)
+   \   000001E6   0xF241 0x527C      MOVW     R2,#+5500
+   \   000001EA   0x2100             MOVS     R1,#+0
+   \   000001EC   0x.... 0x....      LDR.W    R0,??DataTable7_6  ;; 0x40039000
+   \   000001F0   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    176            }
+    177            /*---------------------------------------------------*/
+    178            
+    179            /*-------------------速度部分------------------------------*/
+    180            s5[i++]=(real_pointx-SetCenterX)*(real_pointx-SetCenterX);
+   \                     ??pit0_isr_3: (+1)
+   \   000001F4   0x.... 0x....      LDR.W    R0,??DataTable6_1
+   \   000001F8   0x7800             LDRB     R0,[R0, #+0]
+   \   000001FA   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000001FE   0x7809             LDRB     R1,[R1, #+0]
+   \   00000200   0x1A40             SUBS     R0,R0,R1
+   \   00000202   0x.... 0x....      LDR.W    R1,??DataTable6_1
+   \   00000206   0x7809             LDRB     R1,[R1, #+0]
+   \   00000208   0x.... 0x....      LDR.W    R2,??DataTable11
+   \   0000020C   0x7812             LDRB     R2,[R2, #+0]
+   \   0000020E   0x1A89             SUBS     R1,R1,R2
+   \   00000210   0xFB10 0xF001      SMULBB   R0,R0,R1
+   \   00000214   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000218   0x.... 0x....      LDR.W    R2,??DataTable8_5
+   \   0000021C   0xF992 0x2000      LDRSB    R2,[R2, #+0]
+   \   00000220   0xF821 0x0012      STRH     R0,[R1, R2, LSL #+1]
+   \   00000224   0x.... 0x....      LDR.W    R0,??DataTable8_5
+   \   00000228   0x7800             LDRB     R0,[R0, #+0]
+   \   0000022A   0x1C40             ADDS     R0,R0,#+1
+   \   0000022C   0x.... 0x....      LDR.W    R1,??DataTable8_5
+   \   00000230   0x7008             STRB     R0,[R1, #+0]
+    181            if(i>=10) i=0;  //采集10次舵机打角
+   \   00000232   0x.... 0x....      LDR.W    R0,??DataTable8_5
+   \   00000236   0xF990 0x0000      LDRSB    R0,[R0, #+0]
+   \   0000023A   0x280A             CMP      R0,#+10
+   \   0000023C   0xDB03             BLT.N    ??pit0_isr_12
+   \   0000023E   0x2000             MOVS     R0,#+0
+   \   00000240   0x.... 0x....      LDR.W    R1,??DataTable8_5
+   \   00000244   0x7008             STRB     R0,[R1, #+0]
+    182            ss=(s5[0]+s5[1]+s5[2]+s5[3]+s5[4]+s5[5]+s5[6]+s5[7]+s5[8]+s5[9])/10;  //反应车身平稳性
+   \                     ??pit0_isr_12: (+1)
+   \   00000246   0x.... 0x....      LDR.W    R0,??DataTable8_4
+   \   0000024A   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   0000024E   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000252   0xF9B1 0x1002      LDRSH    R1,[R1, #+2]
+   \   00000256   0x1808             ADDS     R0,R1,R0
+   \   00000258   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   0000025C   0xF9B1 0x1004      LDRSH    R1,[R1, #+4]
+   \   00000260   0x1840             ADDS     R0,R0,R1
+   \   00000262   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000266   0xF9B1 0x1006      LDRSH    R1,[R1, #+6]
+   \   0000026A   0x1840             ADDS     R0,R0,R1
+   \   0000026C   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000270   0xF9B1 0x1008      LDRSH    R1,[R1, #+8]
+   \   00000274   0x1840             ADDS     R0,R0,R1
+   \   00000276   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   0000027A   0xF9B1 0x100A      LDRSH    R1,[R1, #+10]
+   \   0000027E   0x1840             ADDS     R0,R0,R1
+   \   00000280   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000284   0xF9B1 0x100C      LDRSH    R1,[R1, #+12]
+   \   00000288   0x1840             ADDS     R0,R0,R1
+   \   0000028A   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   0000028E   0xF9B1 0x100E      LDRSH    R1,[R1, #+14]
+   \   00000292   0x1840             ADDS     R0,R0,R1
+   \   00000294   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   00000298   0xF9B1 0x1010      LDRSH    R1,[R1, #+16]
+   \   0000029C   0x1840             ADDS     R0,R0,R1
+   \   0000029E   0x.... 0x....      LDR.W    R1,??DataTable8_4
+   \   000002A2   0xF9B1 0x1012      LDRSH    R1,[R1, #+18]
+   \   000002A6   0x1840             ADDS     R0,R0,R1
+   \   000002A8   0x210A             MOVS     R1,#+10
+   \   000002AA   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   000002AE   0x.... 0x....      LDR.W    R1,??DataTable10
+   \   000002B2   0x8008             STRH     R0,[R1, #+0]
+    183            
+    184            qd_result = -LPLD_FTM_GetCounter(FTM2);//10毫秒的脉冲数
+   \   000002B4   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400b8000
+   \   000002B8   0x.... 0x....      BL       LPLD_FTM_GetCounter
+   \   000002BC   0x4240             RSBS     R0,R0,#+0
+   \   000002BE   0x.... 0x....      LDR.W    R1,??DataTable10_1
+   \   000002C2   0x8008             STRH     R0,[R1, #+0]
+    185            LPLD_FTM_ClearCounter(FTM2);                //清空计数器
+   \   000002C4   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400b8000
+   \   000002C8   0x.... 0x....      BL       LPLD_FTM_ClearCounter
+    186            speed = qd_result*100*100/ CAR_PLUSE_ONE_METER;//速度计算cm/s
+   \   000002CC   0x.... 0x....      LDR.W    R0,??DataTable10_1
+   \   000002D0   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000002D4   0xF242 0x7110      MOVW     R1,#+10000
+   \   000002D8   0xFB10 0xF001      SMULBB   R0,R0,R1
+   \   000002DC   0xF247 0x21B0      MOVW     R1,#+29360
+   \   000002E0   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   000002E4   0x.... 0x....      LDR.W    R1,??DataTable11_1
+   \   000002E8   0x8008             STRH     R0,[R1, #+0]
+    187            
+    188            SetSpeed_Configuration();//根据不同情况进行速度设定
+   \   000002EA   0x.... 0x....      BL       SetSpeed_Configuration
+    189            //pid计算
+    190            Speed_PID_Cal(SetSpeed,speed);  
+   \   000002EE   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   000002F2   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000002F6   0x.... 0x....      BL       __aeabi_i2f
+   \   000002FA   0x0001             MOVS     R1,R0
+   \   000002FC   0x000C             MOVS     R4,R1
+   \   000002FE   0x.... 0x....      LDR.W    R0,??DataTable11_2
+   \   00000302   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000306   0x.... 0x....      BL       __aeabi_i2f
+   \   0000030A   0x0021             MOVS     R1,R4
+   \   0000030C   0x.... 0x....      BL       Speed_PID_Cal
+    191            //Speed_PID.Output=Heb_learning_Function(&Speed_Struct,SetSpeed,speed,4,atime );
+    192            //A_Speed_PID_Cal(SetSpeed,speed);  //增量PID
+    193            
+    194            if(move_flag)//发车，电机输出
+   \   00000310   0x.... 0x....      LDR.W    R0,??DataTable8_2
+   \   00000314   0x7800             LDRB     R0,[R0, #+0]
+   \   00000316   0x2800             CMP      R0,#+0
+   \   00000318   0xD02C             BEQ.N    ??pit0_isr_13
+    195            {
+    196              if (Speed_PID.Output>=0)
+   \   0000031A   0x.... 0x....      LDR.W    R0,??DataTable7_1
+   \   0000031E   0x6A80             LDR      R0,[R0, #+40]
+   \   00000320   0x2100             MOVS     R1,#+0
+   \   00000322   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   00000326   0xD811             BHI.N    ??pit0_isr_14
+    197              {
+    198                LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch5,(uint32)Speed_PID.Output);
+   \   00000328   0x.... 0x....      LDR.W    R0,??DataTable7_1
+   \   0000032C   0x6A80             LDR      R0,[R0, #+40]
+   \   0000032E   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000332   0x0002             MOVS     R2,R0
+   \   00000334   0x2105             MOVS     R1,#+5
+   \   00000336   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   0000033A   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    199                LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch4,0);
+   \   0000033E   0x2200             MOVS     R2,#+0
+   \   00000340   0x2104             MOVS     R1,#+4
+   \   00000342   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   00000346   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   0000034A   0xE01F             B.N      ??pit0_isr_15
+    200              }
+    201              else //电机反转
+    202              { 
+    203                LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch4,(uint32)(-Speed_PID.Output));
+   \                     ??pit0_isr_14: (+1)
+   \   0000034C   0x.... 0x....      LDR.W    R0,??DataTable7_1
+   \   00000350   0x6A80             LDR      R0,[R0, #+40]
+   \   00000352   0xF090 0x4000      EORS     R0,R0,#0x80000000
+   \   00000356   0x.... 0x....      BL       __aeabi_f2uiz
+   \   0000035A   0x0002             MOVS     R2,R0
+   \   0000035C   0x2104             MOVS     R1,#+4
+   \   0000035E   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   00000362   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    204                LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch5,0);
+   \   00000366   0x2200             MOVS     R2,#+0
+   \   00000368   0x2105             MOVS     R1,#+5
+   \   0000036A   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   0000036E   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000372   0xE00B             B.N      ??pit0_isr_15
+    205              }
+    206            }
+    207            else  //正在发车，电机输出0
+    208            {
+    209              LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch4,0);
+   \                     ??pit0_isr_13: (+1)
+   \   00000374   0x2200             MOVS     R2,#+0
+   \   00000376   0x2104             MOVS     R1,#+4
+   \   00000378   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   0000037C   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    210              LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch5,0);
+   \   00000380   0x2200             MOVS     R2,#+0
+   \   00000382   0x2105             MOVS     R1,#+5
+   \   00000384   0x.... 0x....      LDR.W    R0,??DataTable11_3  ;; 0x40038000
+   \   00000388   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    211            } 
+    212            
+    213            
+    214          }
+   \                     ??pit0_isr_15: (+1)
+   \   0000038C   0xBD10             POP      {R4,PC}          ;; return
+    215          
+    216          
+
+   \                                 In section .text, align 2, keep-with-next
+    217          void SetSpeed_Configuration()//速度配置
+    218          { 
+   \                     SetSpeed_Configuration: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    219            /*------------速度控制主要部分---------------*/
+    220            if(NOpoint) //看不到图像，设定低速，不进行高速锁定
+   \   00000002   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   00000006   0x7800             LDRB     R0,[R0, #+0]
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD00A             BEQ.N    ??SetSpeed_Configuration_0
+    221            {
+    222              SetSpeed=turnspeed;  
+   \   0000000C   0x.... 0x....      LDR.W    R0,??DataTable11_4
+   \   00000010   0x8800             LDRH     R0,[R0, #+0]
+   \   00000012   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   00000016   0x8008             STRH     R0,[R1, #+0]
+    223              sflag=0;  //解锁标志
+   \   00000018   0x2000             MOVS     R0,#+0
+   \   0000001A   0x.... 0x....      LDR.W    R1,??DataTable11_5
+   \   0000001E   0x7008             STRB     R0,[R1, #+0]
+   \   00000020   0xE029             B.N      ??SetSpeed_Configuration_1
+    224            }
+    225            else   
+    226            {
+    227              if(sflag==0)//有图像，未高速锁定
+   \                     ??SetSpeed_Configuration_0: (+1)
+   \   00000022   0x.... 0x....      LDR.W    R0,??DataTable11_5
+   \   00000026   0x7800             LDRB     R0,[R0, #+0]
+   \   00000028   0x2800             CMP      R0,#+0
+   \   0000002A   0xD119             BNE.N    ??SetSpeed_Configuration_2
+    228              {
+    229                if(ss<acce)  //车身平稳性判定
+   \   0000002C   0x.... 0x....      LDR.W    R0,??DataTable10
+   \   00000030   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000034   0x.... 0x....      LDR.W    R1,??DataTable11_6
+   \   00000038   0x8809             LDRH     R1,[R1, #+0]
+   \   0000003A   0x4288             CMP      R0,R1
+   \   0000003C   0xDA0A             BGE.N    ??SetSpeed_Configuration_3
+    230                {
+    231                  SetSpeed=highspeed;
+   \   0000003E   0x.... 0x....      LDR.W    R0,??DataTable11_7
+   \   00000042   0x8800             LDRH     R0,[R0, #+0]
+   \   00000044   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   00000048   0x8008             STRH     R0,[R1, #+0]
+    232                  sflag=1;//锁定标志
+   \   0000004A   0x2001             MOVS     R0,#+1
+   \   0000004C   0x.... 0x....      LDR.W    R1,??DataTable11_5
+   \   00000050   0x7008             STRB     R0,[R1, #+0]
+   \   00000052   0xE005             B.N      ??SetSpeed_Configuration_2
+    233                }
+    234                else 
+    235                  SetSpeed=lowspeed;
+   \                     ??SetSpeed_Configuration_3: (+1)
+   \   00000054   0x.... 0x....      LDR.W    R0,??DataTable11_8
+   \   00000058   0x8800             LDRH     R0,[R0, #+0]
+   \   0000005A   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   0000005E   0x8008             STRH     R0,[R1, #+0]
+    236              }
+    237              
+    238              if(sflag==1)  //有图像，高速锁定
+   \                     ??SetSpeed_Configuration_2: (+1)
+   \   00000060   0x.... 0x....      LDR.W    R0,??DataTable11_5
+   \   00000064   0x7800             LDRB     R0,[R0, #+0]
+   \   00000066   0x2801             CMP      R0,#+1
+   \   00000068   0xD105             BNE.N    ??SetSpeed_Configuration_1
+    239                SetSpeed=highspeed;
+   \   0000006A   0x.... 0x....      LDR.W    R0,??DataTable11_7
+   \   0000006E   0x8800             LDRH     R0,[R0, #+0]
+   \   00000070   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   00000074   0x8008             STRH     R0,[R1, #+0]
+    240            }
+    241            /*-------------------------------------*/
+    242            
+    243            //后续设定可以覆盖前面设定，越往后，优先级越高
+    244             
+    245            if(real_pointy>=brake_start && !NOpoint)  //靠近灯减速,此段放在后面，可覆盖前面速度设定
+   \                     ??SetSpeed_Configuration_1: (+1)
+   \   00000076   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   0000007A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000007C   0x.... 0x....      LDR.W    R1,??DataTable11_9
+   \   00000080   0x7809             LDRB     R1,[R1, #+0]
+   \   00000082   0x4288             CMP      R0,R1
+   \   00000084   0xD334             BCC.N    ??SetSpeed_Configuration_4
+   \   00000086   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   0000008A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000008C   0x2800             CMP      R0,#+0
+   \   0000008E   0xD12F             BNE.N    ??SetSpeed_Configuration_4
+    246            {
+    247              if((speed>420)|| zero_lock1==1)  
+   \   00000090   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   00000094   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000098   0xF5B0 0x7FD2      CMP      R0,#+420
+   \   0000009C   0xDC04             BGT.N    ??SetSpeed_Configuration_5
+   \   0000009E   0x.... 0x....      LDR.W    R0,??DataTable7_13
+   \   000000A2   0x7800             LDRB     R0,[R0, #+0]
+   \   000000A4   0x2801             CMP      R0,#+1
+   \   000000A6   0xD108             BNE.N    ??SetSpeed_Configuration_6
+    248              {
+    249                zero_lock1=1;  //置1，持续设定0速，直到无图置0
+   \                     ??SetSpeed_Configuration_5: (+1)
+   \   000000A8   0x2001             MOVS     R0,#+1
+   \   000000AA   0x.... 0x....      LDR.W    R1,??DataTable7_13
+   \   000000AE   0x7008             STRB     R0,[R1, #+0]
+    250                SetSpeed=150;
+   \   000000B0   0x2096             MOVS     R0,#+150
+   \   000000B2   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   000000B6   0x8008             STRH     R0,[R1, #+0]
+   \   000000B8   0xE01A             B.N      ??SetSpeed_Configuration_4
+    251              }
+    252              else if((speed>380) || zero_lock2==1)
+   \                     ??SetSpeed_Configuration_6: (+1)
+   \   000000BA   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   000000BE   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000000C2   0xF5B0 0x7FBE      CMP      R0,#+380
+   \   000000C6   0xDC04             BGT.N    ??SetSpeed_Configuration_7
+   \   000000C8   0x.... 0x....      LDR.W    R0,??DataTable8_3
+   \   000000CC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000CE   0x2801             CMP      R0,#+1
+   \   000000D0   0xD108             BNE.N    ??SetSpeed_Configuration_8
+    253              {
+    254                zero_lock2=1;  //置1，持续设定0速，直到无图置0
+   \                     ??SetSpeed_Configuration_7: (+1)
+   \   000000D2   0x2001             MOVS     R0,#+1
+   \   000000D4   0x.... 0x....      LDR.W    R1,??DataTable8_3
+   \   000000D8   0x7008             STRB     R0,[R1, #+0]
+    255                SetSpeed=200;
+   \   000000DA   0x20C8             MOVS     R0,#+200
+   \   000000DC   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   000000E0   0x8008             STRH     R0,[R1, #+0]
+   \   000000E2   0xE005             B.N      ??SetSpeed_Configuration_4
+    256              }
+    257              else
+    258                SetSpeed=lowspeed; 
+   \                     ??SetSpeed_Configuration_8: (+1)
+   \   000000E4   0x.... 0x....      LDR.W    R0,??DataTable11_8
+   \   000000E8   0x8800             LDRH     R0,[R0, #+0]
+   \   000000EA   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   000000EE   0x8008             STRH     R0,[R1, #+0]
+    259            }
+    260            /* 
+    261            if(real_pointy>=50 && !NOpoint)  //靠近灯减速,此段放在后面，可覆盖前面速度设定
+    262            {
+    263              if(speed>lowspeed+50)  
+    264                SetSpeed=-lowspeed;
+    265              else
+    266                SetSpeed=lowspeed; 
+    267            }
+    268             */
+    269            //避障速度控制
+    270            if(real_pointy <= bz_end && NOpoint==0)//有图避障范围
+   \                     ??SetSpeed_Configuration_4: (+1)
+   \   000000F0   0x.... 0x....      LDR.W    R0,??DataTable7_8
+   \   000000F4   0x7800             LDRB     R0,[R0, #+0]
+   \   000000F6   0x.... 0x....      LDR.W    R1,??DataTable8_1
+   \   000000FA   0x7809             LDRB     R1,[R1, #+0]
+   \   000000FC   0x4288             CMP      R0,R1
+   \   000000FE   0xD34A             BCC.N    ??SetSpeed_Configuration_9
+   \   00000100   0x.... 0x....      LDR.W    R0,??DataTable6
+   \   00000104   0x7800             LDRB     R0,[R0, #+0]
+   \   00000106   0x2800             CMP      R0,#+0
+   \   00000108   0xD145             BNE.N    ??SetSpeed_Configuration_9
+    271            {
+    272              if(PTE27_I==1||PTE28_I==1||PTD9_I==1||PTD9_I==1)
+   \   0000010A   0x.... 0x....      LDR.W    R0,??DataTable7_9  ;; 0x43fe226c
+   \   0000010E   0x6800             LDR      R0,[R0, #+0]
+   \   00000110   0x2801             CMP      R0,#+1
+   \   00000112   0xD00E             BEQ.N    ??SetSpeed_Configuration_10
+   \   00000114   0x.... 0x....      LDR.W    R0,??DataTable7_10  ;; 0x43fe2270
+   \   00000118   0x6800             LDR      R0,[R0, #+0]
+   \   0000011A   0x2801             CMP      R0,#+1
+   \   0000011C   0xD009             BEQ.N    ??SetSpeed_Configuration_10
+   \   0000011E   0x.... 0x....      LDR.W    R0,??DataTable7_12  ;; 0x43fe1a24
+   \   00000122   0x6800             LDR      R0,[R0, #+0]
+   \   00000124   0x2801             CMP      R0,#+1
+   \   00000126   0xD004             BEQ.N    ??SetSpeed_Configuration_10
+   \   00000128   0x.... 0x....      LDR.W    R0,??DataTable7_12  ;; 0x43fe1a24
+   \   0000012C   0x6800             LDR      R0,[R0, #+0]
+   \   0000012E   0x2801             CMP      R0,#+1
+   \   00000130   0xD122             BNE.N    ??SetSpeed_Configuration_11
+    273              {
+    274                BUZZER_ON;
+   \                     ??SetSpeed_Configuration_10: (+1)
+   \   00000132   0x2201             MOVS     R2,#+1
+   \   00000134   0x2119             MOVS     R1,#+25
+   \   00000136   0x.... 0x....      LDR.W    R0,??DataTable11_10  ;; 0x400ff000
+   \   0000013A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    275                SetSpeed=bz_speed;//避障低速
+   \   0000013E   0x.... 0x....      LDR.W    R0,??DataTable11_11
+   \   00000142   0x8800             LDRH     R0,[R0, #+0]
+   \   00000144   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   00000148   0x8008             STRH     R0,[R1, #+0]
+    276                sflag=0;//解锁高速锁定
+   \   0000014A   0x2000             MOVS     R0,#+0
+   \   0000014C   0x.... 0x....      LDR.W    R1,??DataTable11_5
+   \   00000150   0x7008             STRB     R0,[R1, #+0]
+    277                if(del++>=5)  //延时去抖
+   \   00000152   0x.... 0x....      LDR.W    R0,??DataTable11_12
+   \   00000156   0x7800             LDRB     R0,[R0, #+0]
+   \   00000158   0x1C41             ADDS     R1,R0,#+1
+   \   0000015A   0x.... 0x....      LDR.W    R2,??DataTable11_12
+   \   0000015E   0x7011             STRB     R1,[R2, #+0]
+   \   00000160   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000162   0x2805             CMP      R0,#+5
+   \   00000164   0xDB25             BLT.N    ??SetSpeed_Configuration_12
+    278                {
+    279                  bz_flag=1;//立避障标志
+   \   00000166   0x2001             MOVS     R0,#+1
+   \   00000168   0x.... 0x....      LDR.W    R1,??DataTable7_3
+   \   0000016C   0x7008             STRB     R0,[R1, #+0]
+    280                  lr_lock=0;//解锁偏航设定
+   \   0000016E   0x2000             MOVS     R0,#+0
+   \   00000170   0x.... 0x....      LDR.W    R1,??DataTable7_2
+   \   00000174   0x7008             STRB     R0,[R1, #+0]
+   \   00000176   0xE01C             B.N      ??SetSpeed_Configuration_12
+    281                }
+    282              }
+    283              else
+    284              {
+    285                del=0;
+   \                     ??SetSpeed_Configuration_11: (+1)
+   \   00000178   0x2000             MOVS     R0,#+0
+   \   0000017A   0x.... 0x....      LDR.W    R1,??DataTable11_12
+   \   0000017E   0x7008             STRB     R0,[R1, #+0]
+    286                bz_flag=0;  //清避障标志
+   \   00000180   0x2000             MOVS     R0,#+0
+   \   00000182   0x.... 0x....      LDR.W    R1,??DataTable7_3
+   \   00000186   0x7008             STRB     R0,[R1, #+0]
+    287                BUZZER_OFF;
+   \   00000188   0x2200             MOVS     R2,#+0
+   \   0000018A   0x2119             MOVS     R1,#+25
+   \   0000018C   0x.... 0x....      LDR.W    R0,??DataTable11_10  ;; 0x400ff000
+   \   00000190   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000194   0xE00D             B.N      ??SetSpeed_Configuration_12
+    288              }
+    289            }
+    290            else
+    291            {
+    292              del=0;
+   \                     ??SetSpeed_Configuration_9: (+1)
+   \   00000196   0x2000             MOVS     R0,#+0
+   \   00000198   0x.... 0x....      LDR.W    R1,??DataTable11_12
+   \   0000019C   0x7008             STRB     R0,[R1, #+0]
+    293              bz_flag=0;  //清避障标志
+   \   0000019E   0x2000             MOVS     R0,#+0
+   \   000001A0   0x.... 0x....      LDR.W    R1,??DataTable7_3
+   \   000001A4   0x7008             STRB     R0,[R1, #+0]
+    294              BUZZER_OFF;
+   \   000001A6   0x2200             MOVS     R2,#+0
+   \   000001A8   0x2119             MOVS     R1,#+25
+   \   000001AA   0x.... 0x....      LDR.W    R0,??DataTable11_10  ;; 0x400ff000
+   \   000001AE   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    295            }
+    296            
+    297            if(code_switch==16 && move_flag)// 竞赛，倒车  
+   \                     ??SetSpeed_Configuration_12: (+1)
+   \   000001B2   0x.... 0x....      LDR.W    R0,??DataTable7_5
+   \   000001B6   0x7800             LDRB     R0,[R0, #+0]
+   \   000001B8   0x2810             CMP      R0,#+16
+   \   000001BA   0xD12C             BNE.N    ??SetSpeed_Configuration_13
+   \   000001BC   0x.... 0x....      LDR.W    R0,??DataTable8_2
+   \   000001C0   0x7800             LDRB     R0,[R0, #+0]
+   \   000001C2   0x2800             CMP      R0,#+0
+   \   000001C4   0xD027             BEQ.N    ??SetSpeed_Configuration_13
+    298            {
+    299              if(speed<10)//倒车速度控制，因放在速度设定之后，如果满足条件，覆盖之前速度设定
+   \   000001C6   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   000001CA   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000001CE   0x280A             CMP      R0,#+10
+   \   000001D0   0xDA1D             BGE.N    ??SetSpeed_Configuration_14
+    300              {
+    301                dc_judge--;
+   \   000001D2   0x.... 0x....      LDR.W    R0,??DataTable9
+   \   000001D6   0x8800             LDRH     R0,[R0, #+0]
+   \   000001D8   0x1E40             SUBS     R0,R0,#+1
+   \   000001DA   0x.... 0x....      LDR.W    R1,??DataTable9
+   \   000001DE   0x8008             STRH     R0,[R1, #+0]
+    302                if(dc_judge<0 && dc_judge>-40 )  //300ms车轮持续不转则设定反转，反转时间为300ms
+   \   000001E0   0x.... 0x....      LDR.W    R0,??DataTable9
+   \   000001E4   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000001E8   0x3027             ADDS     R0,R0,#+39
+   \   000001EA   0x2827             CMP      R0,#+39
+   \   000001EC   0xD208             BCS.N    ??SetSpeed_Configuration_15
+    303                  SetSpeed=-lowspeed;
+   \   000001EE   0x.... 0x....      LDR.W    R0,??DataTable11_8
+   \   000001F2   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000001F6   0x4240             RSBS     R0,R0,#+0
+   \   000001F8   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   000001FC   0x8008             STRH     R0,[R1, #+0]
+   \   000001FE   0xE00A             B.N      ??SetSpeed_Configuration_13
+    304                else 
+    305                  SetSpeed=lowspeed;
+   \                     ??SetSpeed_Configuration_15: (+1)
+   \   00000200   0x.... 0x....      LDR.W    R0,??DataTable11_8
+   \   00000204   0x8800             LDRH     R0,[R0, #+0]
+   \   00000206   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \   0000020A   0x8008             STRH     R0,[R1, #+0]
+   \   0000020C   0xE003             B.N      ??SetSpeed_Configuration_13
+    306              }
+    307              else
+    308                dc_judge=30;  //检测时间为300ms
+   \                     ??SetSpeed_Configuration_14: (+1)
+   \   0000020E   0x201E             MOVS     R0,#+30
+   \   00000210   0x.... 0x....      LDR.W    R1,??DataTable9
+   \   00000214   0x8008             STRH     R0,[R1, #+0]
+    309            }
+    310            
+    311            //if(car_stop_flag==1) //在线调参数时,或者3s看不到图时的停车标志，放在最后
+    312              //SetSpeed=0;
+    313              
+    314          }
+   \                     ??SetSpeed_Configuration_13: (+1)
+   \   00000216   0xBD01             POP      {R0,PC}          ;; return
+    315          
+    316          /*-------------------靠右靠左中点校正---------------*/
+
+   \                                 In section .text, align 2, keep-with-next
+    317          void Middle_Point_Configure( void )  
+    318          {
+    319            
+    320            if(real_pointy>10) //到阈值(靠近信标),偏航
+   \                     Middle_Point_Configure: (+1)
+   \   00000000   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x280B             CMP      R0,#+11
+   \   00000008   0xF2C0 0x8237      BLT.W    ??Middle_Point_Configure_0
+    321            {
+    322              if((speed>400 && ph_lock2!=1)|| ph_lock1==1)
+   \   0000000C   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   00000010   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000014   0xF5B0 0x7FC8      CMP      R0,#+400
+   \   00000018   0xDD04             BLE.N    ??Middle_Point_Configure_1
+   \   0000001A   0x.... 0x....      LDR.W    R0,??DataTable9_2
+   \   0000001E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000020   0x2801             CMP      R0,#+1
+   \   00000022   0xD105             BNE.N    ??Middle_Point_Configure_2
+   \                     ??Middle_Point_Configure_1: (+1)
+   \   00000024   0x.... 0x....      LDR.W    R0,??DataTable9_1
+   \   00000028   0x7800             LDRB     R0,[R0, #+0]
+   \   0000002A   0x2801             CMP      R0,#+1
+   \   0000002C   0xF040 0x80C0      BNE.W    ??Middle_Point_Configure_3
+    323              {
+    324                ph_lock1=1;         //偏航锁定
+   \                     ??Middle_Point_Configure_2: (+1)
+   \   00000030   0x2001             MOVS     R0,#+1
+   \   00000032   0x.... 0x....      LDR.W    R1,??DataTable9_1
+   \   00000036   0x7008             STRB     R0,[R1, #+0]
+    325                if(real_pointy<15)//rol判断左右
+   \   00000038   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   0000003C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000003E   0x280F             CMP      R0,#+15
+   \   00000040   0xDA14             BGE.N    ??Middle_Point_Configure_4
+    326                  if (rol==1) SetCenterX=rph1-2; // 82 
+   \   00000042   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   00000046   0x7800             LDRB     R0,[R0, #+0]
+   \   00000048   0x2801             CMP      R0,#+1
+   \   0000004A   0xD107             BNE.N    ??Middle_Point_Configure_5
+   \   0000004C   0x.... 0x....      LDR.W    R0,??DataTable11_13
+   \   00000050   0x7800             LDRB     R0,[R0, #+0]
+   \   00000052   0x1E80             SUBS     R0,R0,#+2
+   \   00000054   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000058   0x7008             STRB     R0,[R1, #+0]
+   \   0000005A   0xE213             B.N      ??Middle_Point_Configure_6
+    327                  else SetCenterX=lph1+2;      //92
+   \                     ??Middle_Point_Configure_5: (+1)
+   \   0000005C   0x.... 0x....      LDR.W    R0,??DataTable11_14
+   \   00000060   0x7800             LDRB     R0,[R0, #+0]
+   \   00000062   0x1C80             ADDS     R0,R0,#+2
+   \   00000064   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000068   0x7008             STRB     R0,[R1, #+0]
+   \   0000006A   0xE20B             B.N      ??Middle_Point_Configure_6
+    328                  
+    329                else if(real_pointy>=15&&real_pointy<20)
+   \                     ??Middle_Point_Configure_4: (+1)
+   \   0000006C   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000070   0x7800             LDRB     R0,[R0, #+0]
+   \   00000072   0x380F             SUBS     R0,R0,#+15
+   \   00000074   0x2805             CMP      R0,#+5
+   \   00000076   0xD214             BCS.N    ??Middle_Point_Configure_7
+    330                  if (rol==1) SetCenterX=rph2-2;// 79 
+   \   00000078   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000007C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000007E   0x2801             CMP      R0,#+1
+   \   00000080   0xD107             BNE.N    ??Middle_Point_Configure_8
+   \   00000082   0x.... 0x....      LDR.W    R0,??DataTable11_15
+   \   00000086   0x7800             LDRB     R0,[R0, #+0]
+   \   00000088   0x1E80             SUBS     R0,R0,#+2
+   \   0000008A   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000008E   0x7008             STRB     R0,[R1, #+0]
+   \   00000090   0xE1F8             B.N      ??Middle_Point_Configure_6
+    331                  else SetCenterX=lph2+2;     //95
+   \                     ??Middle_Point_Configure_8: (+1)
+   \   00000092   0x.... 0x....      LDR.W    R0,??DataTable11_16
+   \   00000096   0x7800             LDRB     R0,[R0, #+0]
+   \   00000098   0x1C80             ADDS     R0,R0,#+2
+   \   0000009A   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000009E   0x7008             STRB     R0,[R1, #+0]
+   \   000000A0   0xE1F0             B.N      ??Middle_Point_Configure_6
+    332                  
+    333                else if(real_pointy>=20&&real_pointy<30)
+   \                     ??Middle_Point_Configure_7: (+1)
+   \   000000A2   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000000A6   0x7800             LDRB     R0,[R0, #+0]
+   \   000000A8   0x3814             SUBS     R0,R0,#+20
+   \   000000AA   0x280A             CMP      R0,#+10
+   \   000000AC   0xD214             BCS.N    ??Middle_Point_Configure_9
+    334                  if (rol==1) SetCenterX=rph3-2;// 75
+   \   000000AE   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   000000B2   0x7800             LDRB     R0,[R0, #+0]
+   \   000000B4   0x2801             CMP      R0,#+1
+   \   000000B6   0xD107             BNE.N    ??Middle_Point_Configure_10
+   \   000000B8   0x.... 0x....      LDR.W    R0,??DataTable11_17
+   \   000000BC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000BE   0x1E80             SUBS     R0,R0,#+2
+   \   000000C0   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000000C4   0x7008             STRB     R0,[R1, #+0]
+   \   000000C6   0xE1DD             B.N      ??Middle_Point_Configure_6
+    335                  else SetCenterX=lph3+2;   //100
+   \                     ??Middle_Point_Configure_10: (+1)
+   \   000000C8   0x.... 0x....      LDR.W    R0,??DataTable11_18
+   \   000000CC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000CE   0x1C80             ADDS     R0,R0,#+2
+   \   000000D0   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000000D4   0x7008             STRB     R0,[R1, #+0]
+   \   000000D6   0xE1D5             B.N      ??Middle_Point_Configure_6
+    336                  
+    337                else if(real_pointy>=30&&real_pointy<40)
+   \                     ??Middle_Point_Configure_9: (+1)
+   \   000000D8   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000000DC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000DE   0x381E             SUBS     R0,R0,#+30
+   \   000000E0   0x280A             CMP      R0,#+10
+   \   000000E2   0xD214             BCS.N    ??Middle_Point_Configure_11
+    338                  if (rol==1)  SetCenterX=rph4-2;// 70 
+   \   000000E4   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   000000E8   0x7800             LDRB     R0,[R0, #+0]
+   \   000000EA   0x2801             CMP      R0,#+1
+   \   000000EC   0xD107             BNE.N    ??Middle_Point_Configure_12
+   \   000000EE   0x.... 0x....      LDR.W    R0,??DataTable11_19
+   \   000000F2   0x7800             LDRB     R0,[R0, #+0]
+   \   000000F4   0x1E80             SUBS     R0,R0,#+2
+   \   000000F6   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000000FA   0x7008             STRB     R0,[R1, #+0]
+   \   000000FC   0xE1C2             B.N      ??Middle_Point_Configure_6
+    339                  else SetCenterX=lph4+2;  //103
+   \                     ??Middle_Point_Configure_12: (+1)
+   \   000000FE   0x.... 0x....      LDR.W    R0,??DataTable11_20
+   \   00000102   0x7800             LDRB     R0,[R0, #+0]
+   \   00000104   0x1C80             ADDS     R0,R0,#+2
+   \   00000106   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000010A   0x7008             STRB     R0,[R1, #+0]
+   \   0000010C   0xE1BA             B.N      ??Middle_Point_Configure_6
+    340                  
+    341                else if(real_pointy>=40&&real_pointy<50)
+   \                     ??Middle_Point_Configure_11: (+1)
+   \   0000010E   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000112   0x7800             LDRB     R0,[R0, #+0]
+   \   00000114   0x3828             SUBS     R0,R0,#+40
+   \   00000116   0x280A             CMP      R0,#+10
+   \   00000118   0xD214             BCS.N    ??Middle_Point_Configure_13
+    342                  if (rol==1) SetCenterX=rph5-2;// 65
+   \   0000011A   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000011E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000120   0x2801             CMP      R0,#+1
+   \   00000122   0xD107             BNE.N    ??Middle_Point_Configure_14
+   \   00000124   0x.... 0x....      LDR.W    R0,??DataTable11_21
+   \   00000128   0x7800             LDRB     R0,[R0, #+0]
+   \   0000012A   0x1E80             SUBS     R0,R0,#+2
+   \   0000012C   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000130   0x7008             STRB     R0,[R1, #+0]
+   \   00000132   0xE1A7             B.N      ??Middle_Point_Configure_6
+    343                  else SetCenterX=lph5+2;    //105
+   \                     ??Middle_Point_Configure_14: (+1)
+   \   00000134   0x.... 0x....      LDR.W    R0,??DataTable11_22
+   \   00000138   0x7800             LDRB     R0,[R0, #+0]
+   \   0000013A   0x1C80             ADDS     R0,R0,#+2
+   \   0000013C   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000140   0x7008             STRB     R0,[R1, #+0]
+   \   00000142   0xE19F             B.N      ??Middle_Point_Configure_6
+    344                  
+    345                else if(real_pointy>=50&&real_pointy<70)
+   \                     ??Middle_Point_Configure_13: (+1)
+   \   00000144   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000148   0x7800             LDRB     R0,[R0, #+0]
+   \   0000014A   0x3832             SUBS     R0,R0,#+50
+   \   0000014C   0x2814             CMP      R0,#+20
+   \   0000014E   0xD214             BCS.N    ??Middle_Point_Configure_15
+    346                  if (rol==1) SetCenterX=rph6-2;// 60 
+   \   00000150   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   00000154   0x7800             LDRB     R0,[R0, #+0]
+   \   00000156   0x2801             CMP      R0,#+1
+   \   00000158   0xD107             BNE.N    ??Middle_Point_Configure_16
+   \   0000015A   0x.... 0x....      LDR.W    R0,??DataTable11_23
+   \   0000015E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000160   0x1E80             SUBS     R0,R0,#+2
+   \   00000162   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000166   0x7008             STRB     R0,[R1, #+0]
+   \   00000168   0xE18C             B.N      ??Middle_Point_Configure_6
+    347                  else SetCenterX=lph6+2;      //110
+   \                     ??Middle_Point_Configure_16: (+1)
+   \   0000016A   0x.... 0x....      LDR.W    R0,??DataTable11_24
+   \   0000016E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000170   0x1C80             ADDS     R0,R0,#+2
+   \   00000172   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000176   0x7008             STRB     R0,[R1, #+0]
+   \   00000178   0xE184             B.N      ??Middle_Point_Configure_6
+    348                  
+    349                else if(real_pointy>=70  )
+   \                     ??Middle_Point_Configure_15: (+1)
+   \   0000017A   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   0000017E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000180   0x2846             CMP      R0,#+70
+   \   00000182   0xF2C0 0x817F      BLT.W    ??Middle_Point_Configure_6
+    350                  if (rol==1) SetCenterX=rph7-2;// 55 
+   \   00000186   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000018A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000018C   0x2801             CMP      R0,#+1
+   \   0000018E   0xD107             BNE.N    ??Middle_Point_Configure_17
+   \   00000190   0x.... 0x....      LDR.W    R0,??DataTable11_25
+   \   00000194   0x7800             LDRB     R0,[R0, #+0]
+   \   00000196   0x1E80             SUBS     R0,R0,#+2
+   \   00000198   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000019C   0x7008             STRB     R0,[R1, #+0]
+   \   0000019E   0xE171             B.N      ??Middle_Point_Configure_6
+    351                  else SetCenterX=lph7+2;    //115
+   \                     ??Middle_Point_Configure_17: (+1)
+   \   000001A0   0x.... 0x....      LDR.W    R0,??DataTable11_26
+   \   000001A4   0x7800             LDRB     R0,[R0, #+0]
+   \   000001A6   0x1C80             ADDS     R0,R0,#+2
+   \   000001A8   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000001AC   0x7008             STRB     R0,[R1, #+0]
+   \   000001AE   0xE169             B.N      ??Middle_Point_Configure_6
+    352              }
+    353              else if((speed<=400 &&  ph_lock1!=1) || ph_lock2==1)
+   \                     ??Middle_Point_Configure_3: (+1)
+   \   000001B0   0x.... 0x....      LDR.W    R0,??DataTable11_1
+   \   000001B4   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000001B8   0xF5B0 0x7FC8      CMP      R0,#+400
+   \   000001BC   0xDC04             BGT.N    ??Middle_Point_Configure_18
+   \   000001BE   0x.... 0x....      LDR.W    R0,??DataTable9_1
+   \   000001C2   0x7800             LDRB     R0,[R0, #+0]
+   \   000001C4   0x2801             CMP      R0,#+1
+   \   000001C6   0xD105             BNE.N    ??Middle_Point_Configure_19
+   \                     ??Middle_Point_Configure_18: (+1)
+   \   000001C8   0x.... 0x....      LDR.W    R0,??DataTable9_2
+   \   000001CC   0x7800             LDRB     R0,[R0, #+0]
+   \   000001CE   0x2801             CMP      R0,#+1
+   \   000001D0   0xF040 0x80AE      BNE.W    ??Middle_Point_Configure_20
+    354              {
+    355                ph_lock2=1;         //偏航锁定
+   \                     ??Middle_Point_Configure_19: (+1)
+   \   000001D4   0x2001             MOVS     R0,#+1
+   \   000001D6   0x.... 0x....      LDR.W    R1,??DataTable9_2
+   \   000001DA   0x7008             STRB     R0,[R1, #+0]
+    356                if(real_pointy<15)//rol判断左右
+   \   000001DC   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000001E0   0x7800             LDRB     R0,[R0, #+0]
+   \   000001E2   0x280F             CMP      R0,#+15
+   \   000001E4   0xDA12             BGE.N    ??Middle_Point_Configure_21
+    357                  if (rol==1) SetCenterX=rph1; // 82 
+   \   000001E6   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   000001EA   0x7800             LDRB     R0,[R0, #+0]
+   \   000001EC   0x2801             CMP      R0,#+1
+   \   000001EE   0xD106             BNE.N    ??Middle_Point_Configure_22
+   \   000001F0   0x.... 0x....      LDR.W    R0,??DataTable11_13
+   \   000001F4   0x7800             LDRB     R0,[R0, #+0]
+   \   000001F6   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000001FA   0x7008             STRB     R0,[R1, #+0]
+   \   000001FC   0xE142             B.N      ??Middle_Point_Configure_6
+    358                  else SetCenterX=lph1;      //92
+   \                     ??Middle_Point_Configure_22: (+1)
+   \   000001FE   0x.... 0x....      LDR.W    R0,??DataTable11_14
+   \   00000202   0x7800             LDRB     R0,[R0, #+0]
+   \   00000204   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000208   0x7008             STRB     R0,[R1, #+0]
+   \   0000020A   0xE13B             B.N      ??Middle_Point_Configure_6
+    359                  
+    360                else if(real_pointy>=15&&real_pointy<20)
+   \                     ??Middle_Point_Configure_21: (+1)
+   \   0000020C   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000210   0x7800             LDRB     R0,[R0, #+0]
+   \   00000212   0x380F             SUBS     R0,R0,#+15
+   \   00000214   0x2805             CMP      R0,#+5
+   \   00000216   0xD212             BCS.N    ??Middle_Point_Configure_23
+    361                  if (rol==1) SetCenterX=rph2;// 79 
+   \   00000218   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000021C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000021E   0x2801             CMP      R0,#+1
+   \   00000220   0xD106             BNE.N    ??Middle_Point_Configure_24
+   \   00000222   0x.... 0x....      LDR.W    R0,??DataTable11_15
+   \   00000226   0x7800             LDRB     R0,[R0, #+0]
+   \   00000228   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000022C   0x7008             STRB     R0,[R1, #+0]
+   \   0000022E   0xE129             B.N      ??Middle_Point_Configure_6
+    362                  else SetCenterX=lph2;     //95
+   \                     ??Middle_Point_Configure_24: (+1)
+   \   00000230   0x.... 0x....      LDR.W    R0,??DataTable11_16
+   \   00000234   0x7800             LDRB     R0,[R0, #+0]
+   \   00000236   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000023A   0x7008             STRB     R0,[R1, #+0]
+   \   0000023C   0xE122             B.N      ??Middle_Point_Configure_6
+    363                  
+    364                else if(real_pointy>=20&&real_pointy<30)
+   \                     ??Middle_Point_Configure_23: (+1)
+   \   0000023E   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000242   0x7800             LDRB     R0,[R0, #+0]
+   \   00000244   0x3814             SUBS     R0,R0,#+20
+   \   00000246   0x280A             CMP      R0,#+10
+   \   00000248   0xD212             BCS.N    ??Middle_Point_Configure_25
+    365                  if (rol==1) SetCenterX=rph3;// 75
+   \   0000024A   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000024E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000250   0x2801             CMP      R0,#+1
+   \   00000252   0xD106             BNE.N    ??Middle_Point_Configure_26
+   \   00000254   0x.... 0x....      LDR.W    R0,??DataTable11_17
+   \   00000258   0x7800             LDRB     R0,[R0, #+0]
+   \   0000025A   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000025E   0x7008             STRB     R0,[R1, #+0]
+   \   00000260   0xE110             B.N      ??Middle_Point_Configure_6
+    366                  else SetCenterX=lph3;   //100
+   \                     ??Middle_Point_Configure_26: (+1)
+   \   00000262   0x.... 0x....      LDR.W    R0,??DataTable11_18
+   \   00000266   0x7800             LDRB     R0,[R0, #+0]
+   \   00000268   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000026C   0x7008             STRB     R0,[R1, #+0]
+   \   0000026E   0xE109             B.N      ??Middle_Point_Configure_6
+    367                  
+    368                else if(real_pointy>=30&&real_pointy<40)
+   \                     ??Middle_Point_Configure_25: (+1)
+   \   00000270   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000274   0x7800             LDRB     R0,[R0, #+0]
+   \   00000276   0x381E             SUBS     R0,R0,#+30
+   \   00000278   0x280A             CMP      R0,#+10
+   \   0000027A   0xD211             BCS.N    ??Middle_Point_Configure_27
+    369                  if (rol==1)  SetCenterX=rph4;// 70 
+   \   0000027C   0x....             LDR.N    R0,??DataTable6_2
+   \   0000027E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000280   0x2801             CMP      R0,#+1
+   \   00000282   0xD106             BNE.N    ??Middle_Point_Configure_28
+   \   00000284   0x.... 0x....      LDR.W    R0,??DataTable11_19
+   \   00000288   0x7800             LDRB     R0,[R0, #+0]
+   \   0000028A   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000028E   0x7008             STRB     R0,[R1, #+0]
+   \   00000290   0xE0F8             B.N      ??Middle_Point_Configure_6
+    370                  else SetCenterX=lph4;  //103
+   \                     ??Middle_Point_Configure_28: (+1)
+   \   00000292   0x.... 0x....      LDR.W    R0,??DataTable11_20
+   \   00000296   0x7800             LDRB     R0,[R0, #+0]
+   \   00000298   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000029C   0x7008             STRB     R0,[R1, #+0]
+   \   0000029E   0xE0F1             B.N      ??Middle_Point_Configure_6
+    371                  
+    372                else if(real_pointy>=40&&real_pointy<50)
+   \                     ??Middle_Point_Configure_27: (+1)
+   \   000002A0   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000002A4   0x7800             LDRB     R0,[R0, #+0]
+   \   000002A6   0x3828             SUBS     R0,R0,#+40
+   \   000002A8   0x280A             CMP      R0,#+10
+   \   000002AA   0xD211             BCS.N    ??Middle_Point_Configure_29
+    373                  if (rol==1) SetCenterX=rph5;// 65
+   \   000002AC   0x....             LDR.N    R0,??DataTable6_2
+   \   000002AE   0x7800             LDRB     R0,[R0, #+0]
+   \   000002B0   0x2801             CMP      R0,#+1
+   \   000002B2   0xD106             BNE.N    ??Middle_Point_Configure_30
+   \   000002B4   0x.... 0x....      LDR.W    R0,??DataTable11_21
+   \   000002B8   0x7800             LDRB     R0,[R0, #+0]
+   \   000002BA   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000002BE   0x7008             STRB     R0,[R1, #+0]
+   \   000002C0   0xE0E0             B.N      ??Middle_Point_Configure_6
+    374                  else SetCenterX=lph5;    //105
+   \                     ??Middle_Point_Configure_30: (+1)
+   \   000002C2   0x.... 0x....      LDR.W    R0,??DataTable11_22
+   \   000002C6   0x7800             LDRB     R0,[R0, #+0]
+   \   000002C8   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000002CC   0x7008             STRB     R0,[R1, #+0]
+   \   000002CE   0xE0D9             B.N      ??Middle_Point_Configure_6
+    375                  
+    376                else if(real_pointy>=50&&real_pointy<70)
+   \                     ??Middle_Point_Configure_29: (+1)
+   \   000002D0   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000002D4   0x7800             LDRB     R0,[R0, #+0]
+   \   000002D6   0x3832             SUBS     R0,R0,#+50
+   \   000002D8   0x2814             CMP      R0,#+20
+   \   000002DA   0xD211             BCS.N    ??Middle_Point_Configure_31
+    377                  if (rol==1) SetCenterX=rph6;// 60 
+   \   000002DC   0x....             LDR.N    R0,??DataTable6_2
+   \   000002DE   0x7800             LDRB     R0,[R0, #+0]
+   \   000002E0   0x2801             CMP      R0,#+1
+   \   000002E2   0xD106             BNE.N    ??Middle_Point_Configure_32
+   \   000002E4   0x.... 0x....      LDR.W    R0,??DataTable11_23
+   \   000002E8   0x7800             LDRB     R0,[R0, #+0]
+   \   000002EA   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000002EE   0x7008             STRB     R0,[R1, #+0]
+   \   000002F0   0xE0C8             B.N      ??Middle_Point_Configure_6
+    378                  else SetCenterX=lph6;      //110
+   \                     ??Middle_Point_Configure_32: (+1)
+   \   000002F2   0x.... 0x....      LDR.W    R0,??DataTable11_24
+   \   000002F6   0x7800             LDRB     R0,[R0, #+0]
+   \   000002F8   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000002FC   0x7008             STRB     R0,[R1, #+0]
+   \   000002FE   0xE0C1             B.N      ??Middle_Point_Configure_6
+    379                  
+    380                else if(real_pointy>=70  )
+   \                     ??Middle_Point_Configure_31: (+1)
+   \   00000300   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000304   0x7800             LDRB     R0,[R0, #+0]
+   \   00000306   0x2846             CMP      R0,#+70
+   \   00000308   0xF2C0 0x80BC      BLT.W    ??Middle_Point_Configure_6
+    381                  if (rol==1) SetCenterX=rph7;// 55 
+   \   0000030C   0x....             LDR.N    R0,??DataTable6_2
+   \   0000030E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000310   0x2801             CMP      R0,#+1
+   \   00000312   0xD106             BNE.N    ??Middle_Point_Configure_33
+   \   00000314   0x.... 0x....      LDR.W    R0,??DataTable11_25
+   \   00000318   0x7800             LDRB     R0,[R0, #+0]
+   \   0000031A   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000031E   0x7008             STRB     R0,[R1, #+0]
+   \   00000320   0xE0B0             B.N      ??Middle_Point_Configure_6
+    382                  else SetCenterX=lph7;    //115
+   \                     ??Middle_Point_Configure_33: (+1)
+   \   00000322   0x.... 0x....      LDR.W    R0,??DataTable11_26
+   \   00000326   0x7800             LDRB     R0,[R0, #+0]
+   \   00000328   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000032C   0x7008             STRB     R0,[R1, #+0]
+   \   0000032E   0xE0A9             B.N      ??Middle_Point_Configure_6
+    383              }
+    384              else
+    385              {
+    386                if(real_pointy<15)//rol判断左右
+   \                     ??Middle_Point_Configure_20: (+1)
+   \   00000330   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000334   0x7800             LDRB     R0,[R0, #+0]
+   \   00000336   0x280F             CMP      R0,#+15
+   \   00000338   0xDA11             BGE.N    ??Middle_Point_Configure_34
+    387                  if (rol==1) SetCenterX=rph1; // 82 
+   \   0000033A   0x....             LDR.N    R0,??DataTable6_2
+   \   0000033C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000033E   0x2801             CMP      R0,#+1
+   \   00000340   0xD106             BNE.N    ??Middle_Point_Configure_35
+   \   00000342   0x.... 0x....      LDR.W    R0,??DataTable11_13
+   \   00000346   0x7800             LDRB     R0,[R0, #+0]
+   \   00000348   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000034C   0x7008             STRB     R0,[R1, #+0]
+   \   0000034E   0xE099             B.N      ??Middle_Point_Configure_6
+    388                  else SetCenterX=lph1;      //92
+   \                     ??Middle_Point_Configure_35: (+1)
+   \   00000350   0x.... 0x....      LDR.W    R0,??DataTable11_14
+   \   00000354   0x7800             LDRB     R0,[R0, #+0]
+   \   00000356   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000035A   0x7008             STRB     R0,[R1, #+0]
+   \   0000035C   0xE092             B.N      ??Middle_Point_Configure_6
+    389                  
+    390                else if(real_pointy>=15&&real_pointy<20)
+   \                     ??Middle_Point_Configure_34: (+1)
+   \   0000035E   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000362   0x7800             LDRB     R0,[R0, #+0]
+   \   00000364   0x380F             SUBS     R0,R0,#+15
+   \   00000366   0x2805             CMP      R0,#+5
+   \   00000368   0xD211             BCS.N    ??Middle_Point_Configure_36
+    391                  if (rol==1) SetCenterX=rph2;// 79 
+   \   0000036A   0x....             LDR.N    R0,??DataTable6_2
+   \   0000036C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000036E   0x2801             CMP      R0,#+1
+   \   00000370   0xD106             BNE.N    ??Middle_Point_Configure_37
+   \   00000372   0x.... 0x....      LDR.W    R0,??DataTable11_15
+   \   00000376   0x7800             LDRB     R0,[R0, #+0]
+   \   00000378   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000037C   0x7008             STRB     R0,[R1, #+0]
+   \   0000037E   0xE081             B.N      ??Middle_Point_Configure_6
+    392                  else SetCenterX=lph2;     //95
+   \                     ??Middle_Point_Configure_37: (+1)
+   \   00000380   0x.... 0x....      LDR.W    R0,??DataTable11_16
+   \   00000384   0x7800             LDRB     R0,[R0, #+0]
+   \   00000386   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000038A   0x7008             STRB     R0,[R1, #+0]
+   \   0000038C   0xE07A             B.N      ??Middle_Point_Configure_6
+    393                  
+    394                else if(real_pointy>=20&&real_pointy<30)
+   \                     ??Middle_Point_Configure_36: (+1)
+   \   0000038E   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000392   0x7800             LDRB     R0,[R0, #+0]
+   \   00000394   0x3814             SUBS     R0,R0,#+20
+   \   00000396   0x280A             CMP      R0,#+10
+   \   00000398   0xD211             BCS.N    ??Middle_Point_Configure_38
+    395                  if (rol==1) SetCenterX=rph3;// 75
+   \   0000039A   0x....             LDR.N    R0,??DataTable6_2
+   \   0000039C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000039E   0x2801             CMP      R0,#+1
+   \   000003A0   0xD106             BNE.N    ??Middle_Point_Configure_39
+   \   000003A2   0x.... 0x....      LDR.W    R0,??DataTable11_17
+   \   000003A6   0x7800             LDRB     R0,[R0, #+0]
+   \   000003A8   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000003AC   0x7008             STRB     R0,[R1, #+0]
+   \   000003AE   0xE069             B.N      ??Middle_Point_Configure_6
+    396                  else SetCenterX=lph3;   //100
+   \                     ??Middle_Point_Configure_39: (+1)
+   \   000003B0   0x.... 0x....      LDR.W    R0,??DataTable11_18
+   \   000003B4   0x7800             LDRB     R0,[R0, #+0]
+   \   000003B6   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000003BA   0x7008             STRB     R0,[R1, #+0]
+   \   000003BC   0xE062             B.N      ??Middle_Point_Configure_6
+    397                  
+    398                else if(real_pointy>=30&&real_pointy<40)
+   \                     ??Middle_Point_Configure_38: (+1)
+   \   000003BE   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000003C2   0x7800             LDRB     R0,[R0, #+0]
+   \   000003C4   0x381E             SUBS     R0,R0,#+30
+   \   000003C6   0x280A             CMP      R0,#+10
+   \   000003C8   0xD211             BCS.N    ??Middle_Point_Configure_40
+    399                  if (rol==1)  SetCenterX=rph4;// 70 
+   \   000003CA   0x....             LDR.N    R0,??DataTable6_2
+   \   000003CC   0x7800             LDRB     R0,[R0, #+0]
+   \   000003CE   0x2801             CMP      R0,#+1
+   \   000003D0   0xD106             BNE.N    ??Middle_Point_Configure_41
+   \   000003D2   0x.... 0x....      LDR.W    R0,??DataTable11_19
+   \   000003D6   0x7800             LDRB     R0,[R0, #+0]
+   \   000003D8   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000003DC   0x7008             STRB     R0,[R1, #+0]
+   \   000003DE   0xE051             B.N      ??Middle_Point_Configure_6
+    400                  else SetCenterX=lph4;  //103
+   \                     ??Middle_Point_Configure_41: (+1)
+   \   000003E0   0x.... 0x....      LDR.W    R0,??DataTable11_20
+   \   000003E4   0x7800             LDRB     R0,[R0, #+0]
+   \   000003E6   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   000003EA   0x7008             STRB     R0,[R1, #+0]
+   \   000003EC   0xE04A             B.N      ??Middle_Point_Configure_6
+    401                  
+    402                else if(real_pointy>=40&&real_pointy<50)
+   \                     ??Middle_Point_Configure_40: (+1)
+   \   000003EE   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   000003F2   0x7800             LDRB     R0,[R0, #+0]
+   \   000003F4   0x3828             SUBS     R0,R0,#+40
+   \   000003F6   0x280A             CMP      R0,#+10
+   \   000003F8   0xD211             BCS.N    ??Middle_Point_Configure_42
+    403                  if (rol==1) SetCenterX=rph5;// 65
+   \   000003FA   0x....             LDR.N    R0,??DataTable6_2
+   \   000003FC   0x7800             LDRB     R0,[R0, #+0]
+   \   000003FE   0x2801             CMP      R0,#+1
+   \   00000400   0xD106             BNE.N    ??Middle_Point_Configure_43
+   \   00000402   0x.... 0x....      LDR.W    R0,??DataTable11_21
+   \   00000406   0x7800             LDRB     R0,[R0, #+0]
+   \   00000408   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000040C   0x7008             STRB     R0,[R1, #+0]
+   \   0000040E   0xE039             B.N      ??Middle_Point_Configure_6
+    404                  else SetCenterX=lph5;    //105
+   \                     ??Middle_Point_Configure_43: (+1)
+   \   00000410   0x.... 0x....      LDR.W    R0,??DataTable11_22
+   \   00000414   0x7800             LDRB     R0,[R0, #+0]
+   \   00000416   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000041A   0x7008             STRB     R0,[R1, #+0]
+   \   0000041C   0xE032             B.N      ??Middle_Point_Configure_6
+    405                  
+    406                else if(real_pointy>=50&&real_pointy<70)
+   \                     ??Middle_Point_Configure_42: (+1)
+   \   0000041E   0x.... 0x....      LDR.W    R0,??DataTable8_1
+   \   00000422   0x7800             LDRB     R0,[R0, #+0]
+   \   00000424   0x3832             SUBS     R0,R0,#+50
+   \   00000426   0x2814             CMP      R0,#+20
+   \   00000428   0xD211             BCS.N    ??Middle_Point_Configure_44
+    407                  if (rol==1) SetCenterX=rph6;// 60 
+   \   0000042A   0x....             LDR.N    R0,??DataTable6_2
+   \   0000042C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000042E   0x2801             CMP      R0,#+1
+   \   00000430   0xD106             BNE.N    ??Middle_Point_Configure_45
+   \   00000432   0x.... 0x....      LDR.W    R0,??DataTable11_23
+   \   00000436   0x7800             LDRB     R0,[R0, #+0]
+   \   00000438   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000043C   0x7008             STRB     R0,[R1, #+0]
+   \   0000043E   0xE021             B.N      ??Middle_Point_Configure_6
+    408                  else SetCenterX=lph6;      //110
+   \                     ??Middle_Point_Configure_45: (+1)
+   \   00000440   0x.... 0x....      LDR.W    R0,??DataTable11_24
+   \   00000444   0x7800             LDRB     R0,[R0, #+0]
+   \   00000446   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   0000044A   0x7008             STRB     R0,[R1, #+0]
+   \   0000044C   0xE01A             B.N      ??Middle_Point_Configure_6
+    409                  
+    410                else if(real_pointy>=70  )
+   \                     ??Middle_Point_Configure_44: (+1)
+   \   0000044E   0x....             LDR.N    R0,??DataTable8_1
+   \   00000450   0x7800             LDRB     R0,[R0, #+0]
+   \   00000452   0x2846             CMP      R0,#+70
+   \   00000454   0xDB16             BLT.N    ??Middle_Point_Configure_6
+    411                  if (rol==1) SetCenterX=rph7;// 55 
+   \   00000456   0x....             LDR.N    R0,??DataTable6_2
+   \   00000458   0x7800             LDRB     R0,[R0, #+0]
+   \   0000045A   0x2801             CMP      R0,#+1
+   \   0000045C   0xD106             BNE.N    ??Middle_Point_Configure_46
+   \   0000045E   0x.... 0x....      LDR.W    R0,??DataTable11_25
+   \   00000462   0x7800             LDRB     R0,[R0, #+0]
+   \   00000464   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000468   0x7008             STRB     R0,[R1, #+0]
+   \   0000046A   0xE00B             B.N      ??Middle_Point_Configure_6
+    412                  else SetCenterX=lph7;    //115
+   \                     ??Middle_Point_Configure_46: (+1)
+   \   0000046C   0x.... 0x....      LDR.W    R0,??DataTable11_26
+   \   00000470   0x7800             LDRB     R0,[R0, #+0]
+   \   00000472   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000476   0x7008             STRB     R0,[R1, #+0]
+   \   00000478   0xE004             B.N      ??Middle_Point_Configure_6
+    413              }
+    414            }
+    415            else   
+    416            {
+    417              SetCenterX=Acenter; //对中
+   \                     ??Middle_Point_Configure_0: (+1)
+   \   0000047A   0x....             LDR.N    R0,??DataTable7_4
+   \   0000047C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000047E   0x.... 0x....      LDR.W    R1,??DataTable11
+   \   00000482   0x7008             STRB     R0,[R1, #+0]
+    418            }
+    419          }
+   \                     ??Middle_Point_Configure_6: (+1)
+   \   00000484   0x4770             BX       LR               ;; return
+    420          
+    421          
+
+   \                                 In section .text, align 2, keep-with-next
+    422          void Speed_PID_Cal(float Target,float Measure)
+    423          {
+   \                     Speed_PID_Cal: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    424            
+    425            Speed_PID.Error=Target-Measure;   //误差=期望值-测量值,可能为负数
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x.... 0x....      BL       __aeabi_fsub
+   \   0000000A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000000C   0x6108             STR      R0,[R1, #+16]
+    426            if(Speed_PID.Error>=Target-20)          //???
+   \   0000000E   0x.... 0x....      LDR.W    R0,??DataTable11_27  ;; 0xc1a00000
+   \   00000012   0x0021             MOVS     R1,R4
+   \   00000014   0x.... 0x....      BL       __aeabi_fadd
+   \   00000018   0x0001             MOVS     R1,R0
+   \   0000001A   0x....             LDR.N    R0,??DataTable7_1
+   \   0000001C   0x6900             LDR      R0,[R0, #+16]
+   \   0000001E   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   00000022   0xD807             BHI.N    ??Speed_PID_Cal_0
+    427              Speed_PID.Integer=Speed_PID.Integer/2;
+   \   00000024   0x....             LDR.N    R0,??DataTable7_1
+   \   00000026   0x69C0             LDR      R0,[R0, #+28]
+   \   00000028   0xF05F 0x4180      MOVS     R1,#+1073741824
+   \   0000002C   0x.... 0x....      BL       __aeabi_fdiv
+   \   00000030   0x....             LDR.N    R1,??DataTable7_1
+   \   00000032   0x61C8             STR      R0,[R1, #+28]
+    428            
+    429            if(Speed_PID.Integer<0)
+   \                     ??Speed_PID_Cal_0: (+1)
+   \   00000034   0x....             LDR.N    R0,??DataTable7_1
+   \   00000036   0x69C0             LDR      R0,[R0, #+28]
+   \   00000038   0x2100             MOVS     R1,#+0
+   \   0000003A   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000003E   0xD203             BCS.N    ??Speed_PID_Cal_1
+    430              Speed_PID.Integer=0;
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x....             LDR.N    R1,??DataTable7_1
+   \   00000044   0x61C8             STR      R0,[R1, #+28]
+   \   00000046   0xE012             B.N      ??Speed_PID_Cal_2
+    431            else if(Speed_PID.I*Speed_PID.Integer>=Speed_PID.iLimit)
+   \                     ??Speed_PID_Cal_1: (+1)
+   \   00000048   0x....             LDR.N    R0,??DataTable7_1
+   \   0000004A   0x6841             LDR      R1,[R0, #+4]
+   \   0000004C   0x....             LDR.N    R0,??DataTable7_1
+   \   0000004E   0x69C0             LDR      R0,[R0, #+28]
+   \   00000050   0x.... 0x....      BL       __aeabi_fmul
+   \   00000054   0x....             LDR.N    R1,??DataTable7_1
+   \   00000056   0x6A09             LDR      R1,[R1, #+32]
+   \   00000058   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   0000005C   0xD807             BHI.N    ??Speed_PID_Cal_2
+    432              Speed_PID.Integer=Speed_PID.iLimit/Speed_PID.I;
+   \   0000005E   0x....             LDR.N    R0,??DataTable7_1
+   \   00000060   0x6A00             LDR      R0,[R0, #+32]
+   \   00000062   0x....             LDR.N    R1,??DataTable7_1
+   \   00000064   0x6849             LDR      R1,[R1, #+4]
+   \   00000066   0x.... 0x....      BL       __aeabi_fdiv
+   \   0000006A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000006C   0x61C8             STR      R0,[R1, #+28]
+    433            Speed_PID.Integer+=Speed_PID.Error;//积分
+   \                     ??Speed_PID_Cal_2: (+1)
+   \   0000006E   0x....             LDR.N    R0,??DataTable7_1
+   \   00000070   0x69C1             LDR      R1,[R0, #+28]
+   \   00000072   0x....             LDR.N    R0,??DataTable7_1
+   \   00000074   0x6900             LDR      R0,[R0, #+16]
+   \   00000076   0x.... 0x....      BL       __aeabi_fadd
+   \   0000007A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000007C   0x61C8             STR      R0,[R1, #+28]
+    434            Speed_PID.Deriv=Speed_PID.Error-Speed_PID.PreError;//微分     
+   \   0000007E   0x....             LDR.N    R0,??DataTable7_1
+   \   00000080   0x6900             LDR      R0,[R0, #+16]
+   \   00000082   0x....             LDR.N    R1,??DataTable7_1
+   \   00000084   0x6949             LDR      R1,[R1, #+20]
+   \   00000086   0x.... 0x....      BL       __aeabi_fsub
+   \   0000008A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000008C   0x6248             STR      R0,[R1, #+36]
+    435            Speed_PID.Output=Speed_PID.P*Speed_PID.Error+Speed_PID.I*Speed_PID.Integer+Speed_PID.D*Speed_PID.Deriv;
+   \   0000008E   0x....             LDR.N    R0,??DataTable7_1
+   \   00000090   0x6801             LDR      R1,[R0, #+0]
+   \   00000092   0x....             LDR.N    R0,??DataTable7_1
+   \   00000094   0x6900             LDR      R0,[R0, #+16]
+   \   00000096   0x.... 0x....      BL       __aeabi_fmul
+   \   0000009A   0x0004             MOVS     R4,R0
+   \   0000009C   0x....             LDR.N    R0,??DataTable7_1
+   \   0000009E   0x6841             LDR      R1,[R0, #+4]
+   \   000000A0   0x....             LDR.N    R0,??DataTable7_1
+   \   000000A2   0x69C0             LDR      R0,[R0, #+28]
+   \   000000A4   0x.... 0x....      BL       __aeabi_fmul
+   \   000000A8   0x0021             MOVS     R1,R4
+   \   000000AA   0x.... 0x....      BL       __aeabi_fadd
+   \   000000AE   0x0004             MOVS     R4,R0
+   \   000000B0   0x....             LDR.N    R0,??DataTable7_1
+   \   000000B2   0x6881             LDR      R1,[R0, #+8]
+   \   000000B4   0x....             LDR.N    R0,??DataTable7_1
+   \   000000B6   0x6A40             LDR      R0,[R0, #+36]
+   \   000000B8   0x.... 0x....      BL       __aeabi_fmul
+   \   000000BC   0x0021             MOVS     R1,R4
+   \   000000BE   0x.... 0x....      BL       __aeabi_fadd
+   \   000000C2   0x....             LDR.N    R1,??DataTable7_1
+   \   000000C4   0x6288             STR      R0,[R1, #+40]
+    436            Speed_PID.PreError=Speed_PID.Error; 
+   \   000000C6   0x....             LDR.N    R0,??DataTable7_1
+   \   000000C8   0x6900             LDR      R0,[R0, #+16]
+   \   000000CA   0x....             LDR.N    R1,??DataTable7_1
+   \   000000CC   0x6148             STR      R0,[R1, #+20]
+    437            //限幅
+    438            if (Speed_PID.Output >= 9990 )
+   \   000000CE   0x....             LDR.N    R0,??DataTable7_1
+   \   000000D0   0x6A80             LDR      R0,[R0, #+40]
+   \   000000D2   0x.... 0x....      LDR.W    R1,??DataTable11_28  ;; 0x461c1800
+   \   000000D6   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   000000DA   0xD803             BHI.N    ??Speed_PID_Cal_3
+    439              Speed_PID.Output=9990;
+   \   000000DC   0x.... 0x....      LDR.W    R0,??DataTable11_28  ;; 0x461c1800
+   \   000000E0   0x....             LDR.N    R1,??DataTable7_1
+   \   000000E2   0x6288             STR      R0,[R1, #+40]
+    440            if (Speed_PID.Output <= -9990 )
+   \                     ??Speed_PID_Cal_3: (+1)
+   \   000000E4   0x....             LDR.N    R0,??DataTable7_1
+   \   000000E6   0x6A80             LDR      R0,[R0, #+40]
+   \   000000E8   0x.... 0x....      LDR.W    R1,??DataTable11_29  ;; 0xc61c17ff
+   \   000000EC   0x.... 0x....      BL       __aeabi_cfcmple
+   \   000000F0   0xD203             BCS.N    ??Speed_PID_Cal_4
+    441              Speed_PID.Output=-9990; 
+   \   000000F2   0x.... 0x....      LDR.W    R0,??DataTable11_30  ;; 0xc61c1800
+   \   000000F6   0x....             LDR.N    R1,??DataTable7_1
+   \   000000F8   0x6288             STR      R0,[R1, #+40]
+    442            
+    443            
+    444            
+    445          }
+   \                     ??Speed_PID_Cal_4: (+1)
+   \   000000FA   0xBD10             POP      {R4,PC}          ;; return
+    446          
+
+   \                                 In section .text, align 2, keep-with-next
+    447          void A_Speed_PID_Cal(float Target,float Measure)
+    448          {
+   \                     A_Speed_PID_Cal: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    449            Speed_PID.Error=Target-Measure;
+   \   00000002   0x.... 0x....      BL       __aeabi_fsub
+   \   00000006   0x....             LDR.N    R1,??DataTable7_1
+   \   00000008   0x6108             STR      R0,[R1, #+16]
+    450            Speed_PID.Output=Speed_PID.Output+Speed_PID.P*(Speed_PID.Error-Speed_PID.PreError)+Speed_PID.I*Speed_PID.Error+Speed_PID.D*(Speed_PID.Error-2*Speed_PID.PreError+Speed_PID.PrePreError);
+   \   0000000A   0x....             LDR.N    R0,??DataTable7_1
+   \   0000000C   0x6900             LDR      R0,[R0, #+16]
+   \   0000000E   0x....             LDR.N    R1,??DataTable7_1
+   \   00000010   0x6949             LDR      R1,[R1, #+20]
+   \   00000012   0x.... 0x....      BL       __aeabi_fsub
+   \   00000016   0x....             LDR.N    R1,??DataTable7_1
+   \   00000018   0x6809             LDR      R1,[R1, #+0]
+   \   0000001A   0x.... 0x....      BL       __aeabi_fmul
+   \   0000001E   0x....             LDR.N    R1,??DataTable7_1
+   \   00000020   0x6A89             LDR      R1,[R1, #+40]
+   \   00000022   0x.... 0x....      BL       __aeabi_fadd
+   \   00000026   0x0004             MOVS     R4,R0
+   \   00000028   0x....             LDR.N    R0,??DataTable7_1
+   \   0000002A   0x6841             LDR      R1,[R0, #+4]
+   \   0000002C   0x....             LDR.N    R0,??DataTable7_1
+   \   0000002E   0x6900             LDR      R0,[R0, #+16]
+   \   00000030   0x.... 0x....      BL       __aeabi_fmul
+   \   00000034   0x0021             MOVS     R1,R4
+   \   00000036   0x.... 0x....      BL       __aeabi_fadd
+   \   0000003A   0x0004             MOVS     R4,R0
+   \   0000003C   0x....             LDR.N    R0,??DataTable7_1
+   \   0000003E   0x6941             LDR      R1,[R0, #+20]
+   \   00000040   0xF05F 0x4080      MOVS     R0,#+1073741824
+   \   00000044   0x.... 0x....      BL       __aeabi_fmul
+   \   00000048   0x0001             MOVS     R1,R0
+   \   0000004A   0x....             LDR.N    R0,??DataTable7_1
+   \   0000004C   0x6900             LDR      R0,[R0, #+16]
+   \   0000004E   0x.... 0x....      BL       __aeabi_fsub
+   \   00000052   0x....             LDR.N    R1,??DataTable7_1
+   \   00000054   0x6989             LDR      R1,[R1, #+24]
+   \   00000056   0x.... 0x....      BL       __aeabi_fadd
+   \   0000005A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000005C   0x6889             LDR      R1,[R1, #+8]
+   \   0000005E   0x.... 0x....      BL       __aeabi_fmul
+   \   00000062   0x0021             MOVS     R1,R4
+   \   00000064   0x.... 0x....      BL       __aeabi_fadd
+   \   00000068   0x....             LDR.N    R1,??DataTable7_1
+   \   0000006A   0x6288             STR      R0,[R1, #+40]
+    451            if (Speed_PID.Output >= 9990 )
+   \   0000006C   0x....             LDR.N    R0,??DataTable7_1
+   \   0000006E   0x6A80             LDR      R0,[R0, #+40]
+   \   00000070   0x....             LDR.N    R1,??DataTable11_28  ;; 0x461c1800
+   \   00000072   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   00000076   0xD802             BHI.N    ??A_Speed_PID_Cal_0
+    452               Speed_PID.Output=9990;
+   \   00000078   0x....             LDR.N    R0,??DataTable11_28  ;; 0x461c1800
+   \   0000007A   0x....             LDR.N    R1,??DataTable7_1
+   \   0000007C   0x6288             STR      R0,[R1, #+40]
+    453             if (Speed_PID.Output <= -9990 )
+   \                     ??A_Speed_PID_Cal_0: (+1)
+   \   0000007E   0x....             LDR.N    R0,??DataTable7_1
+   \   00000080   0x6A80             LDR      R0,[R0, #+40]
+   \   00000082   0x....             LDR.N    R1,??DataTable11_29  ;; 0xc61c17ff
+   \   00000084   0x.... 0x....      BL       __aeabi_cfcmple
+   \   00000088   0xD202             BCS.N    ??A_Speed_PID_Cal_1
+    454               Speed_PID.Output=-9990; 
+   \   0000008A   0x....             LDR.N    R0,??DataTable11_30  ;; 0xc61c1800
+   \   0000008C   0x....             LDR.N    R1,??DataTable7_1
+   \   0000008E   0x6288             STR      R0,[R1, #+40]
+    455            Speed_PID.PrePreError=Speed_PID.PreError;
+   \                     ??A_Speed_PID_Cal_1: (+1)
+   \   00000090   0x....             LDR.N    R0,??DataTable7_1
+   \   00000092   0x6940             LDR      R0,[R0, #+20]
+   \   00000094   0x....             LDR.N    R1,??DataTable7_1
+   \   00000096   0x6188             STR      R0,[R1, #+24]
+    456            Speed_PID.PreError=Speed_PID.Error;
+   \   00000098   0x....             LDR.N    R0,??DataTable7_1
+   \   0000009A   0x6900             LDR      R0,[R0, #+16]
+   \   0000009C   0x....             LDR.N    R1,??DataTable7_1
+   \   0000009E   0x6148             STR      R0,[R1, #+20]
+    457            
+    458          }
+   \   000000A0   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+    459          void Turn_PID_Cal(void)
+    460          { 
+   \                     Turn_PID_Cal: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    461            Turn_PID.Error=real_pointx-SetCenterX;  //测量值减设定值 
+   \   00000002   0x....             LDR.N    R0,??DataTable11_31
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x....             LDR.N    R1,??DataTable11
+   \   00000008   0x7809             LDRB     R1,[R1, #+0]
+   \   0000000A   0x1A40             SUBS     R0,R0,R1
+   \   0000000C   0x.... 0x....      BL       __aeabi_i2f
+   \   00000010   0x....             LDR.N    R1,??DataTable11_32
+   \   00000012   0x6108             STR      R0,[R1, #+16]
+    462            Turn_PID.Deriv=Turn_PID.Error-Turn_PID.PreError; 
+   \   00000014   0x....             LDR.N    R0,??DataTable11_32
+   \   00000016   0x6900             LDR      R0,[R0, #+16]
+   \   00000018   0x....             LDR.N    R1,??DataTable11_32
+   \   0000001A   0x6949             LDR      R1,[R1, #+20]
+   \   0000001C   0x.... 0x....      BL       __aeabi_fsub
+   \   00000020   0x....             LDR.N    R1,??DataTable11_32
+   \   00000022   0x6248             STR      R0,[R1, #+36]
+    463            if(Turn_PID.Error>=15||Turn_PID.Error<=-15)
+   \   00000024   0x....             LDR.N    R0,??DataTable11_32
+   \   00000026   0x6900             LDR      R0,[R0, #+16]
+   \   00000028   0x....             LDR.N    R1,??DataTable11_33  ;; 0x41700000
+   \   0000002A   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   0000002E   0xD905             BLS.N    ??Turn_PID_Cal_0
+   \   00000030   0x....             LDR.N    R0,??DataTable11_32
+   \   00000032   0x6900             LDR      R0,[R0, #+16]
+   \   00000034   0x....             LDR.N    R1,??DataTable11_34  ;; 0xc16fffff
+   \   00000036   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000003A   0xD215             BCS.N    ??Turn_PID_Cal_1
+    464              Turn_PID.Output=Turn_close_PID.P*(Turn_PID.Error)+Turn_PID.Deriv*Turn_close_PID.D+SerMid;//Turn_PID
+   \                     ??Turn_PID_Cal_0: (+1)
+   \   0000003C   0x....             LDR.N    R0,??DataTable11_35
+   \   0000003E   0x6801             LDR      R1,[R0, #+0]
+   \   00000040   0x....             LDR.N    R0,??DataTable11_32
+   \   00000042   0x6900             LDR      R0,[R0, #+16]
+   \   00000044   0x.... 0x....      BL       __aeabi_fmul
+   \   00000048   0x0004             MOVS     R4,R0
+   \   0000004A   0x....             LDR.N    R0,??DataTable11_32
+   \   0000004C   0x6A41             LDR      R1,[R0, #+36]
+   \   0000004E   0x....             LDR.N    R0,??DataTable11_35
+   \   00000050   0x6880             LDR      R0,[R0, #+8]
+   \   00000052   0x.... 0x....      BL       __aeabi_fmul
+   \   00000056   0x0021             MOVS     R1,R4
+   \   00000058   0x.... 0x....      BL       __aeabi_fadd
+   \   0000005C   0x....             LDR.N    R1,??DataTable11_36  ;; 0x458fc000
+   \   0000005E   0x.... 0x....      BL       __aeabi_fadd
+   \   00000062   0x....             LDR.N    R1,??DataTable11_32
+   \   00000064   0x6288             STR      R0,[R1, #+40]
+   \   00000066   0xE014             B.N      ??Turn_PID_Cal_2
+    465            else
+    466              Turn_PID.Output=Turn_PID.P*(Turn_PID.Error)+Turn_PID.Deriv*Turn_PID.D+SerMid;//Turn_close_PID
+   \                     ??Turn_PID_Cal_1: (+1)
+   \   00000068   0x....             LDR.N    R0,??DataTable11_32
+   \   0000006A   0x6801             LDR      R1,[R0, #+0]
+   \   0000006C   0x....             LDR.N    R0,??DataTable11_32
+   \   0000006E   0x6900             LDR      R0,[R0, #+16]
+   \   00000070   0x.... 0x....      BL       __aeabi_fmul
+   \   00000074   0x0004             MOVS     R4,R0
+   \   00000076   0x....             LDR.N    R0,??DataTable11_32
+   \   00000078   0x6A41             LDR      R1,[R0, #+36]
+   \   0000007A   0x....             LDR.N    R0,??DataTable11_32
+   \   0000007C   0x6880             LDR      R0,[R0, #+8]
+   \   0000007E   0x.... 0x....      BL       __aeabi_fmul
+   \   00000082   0x0021             MOVS     R1,R4
+   \   00000084   0x.... 0x....      BL       __aeabi_fadd
+   \   00000088   0x....             LDR.N    R1,??DataTable11_36  ;; 0x458fc000
+   \   0000008A   0x.... 0x....      BL       __aeabi_fadd
+   \   0000008E   0x....             LDR.N    R1,??DataTable11_32
+   \   00000090   0x6288             STR      R0,[R1, #+40]
+    467            if (Turn_PID.Output>SerRightMax)//转角限幅
+   \                     ??Turn_PID_Cal_2: (+1)
+   \   00000092   0x....             LDR.N    R0,??DataTable11_32
+   \   00000094   0x6A80             LDR      R0,[R0, #+40]
+   \   00000096   0x....             LDR.N    R1,??DataTable11_37  ;; 0x45abe001
+   \   00000098   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   0000009C   0xD803             BHI.N    ??Turn_PID_Cal_3
+    468              Turn_PID.Output=SerRightMax;
+   \   0000009E   0x....             LDR.N    R0,??DataTable11_38  ;; 0x45abe000
+   \   000000A0   0x....             LDR.N    R1,??DataTable11_32
+   \   000000A2   0x6288             STR      R0,[R1, #+40]
+   \   000000A4   0xE008             B.N      ??Turn_PID_Cal_4
+    469            else if (Turn_PID.Output<SerLeftMin)
+   \                     ??Turn_PID_Cal_3: (+1)
+   \   000000A6   0x....             LDR.N    R0,??DataTable11_32
+   \   000000A8   0x6A80             LDR      R0,[R0, #+40]
+   \   000000AA   0x....             LDR.N    R1,??DataTable11_39  ;; 0x45674000
+   \   000000AC   0x.... 0x....      BL       __aeabi_cfcmple
+   \   000000B0   0xD202             BCS.N    ??Turn_PID_Cal_4
+    470              Turn_PID.Output=SerLeftMin;
+   \   000000B2   0x....             LDR.N    R0,??DataTable11_39  ;; 0x45674000
+   \   000000B4   0x....             LDR.N    R1,??DataTable11_32
+   \   000000B6   0x6288             STR      R0,[R1, #+40]
+    471            
+    472            Turn_PID.PreError=Turn_PID.Error;
+   \                     ??Turn_PID_Cal_4: (+1)
+   \   000000B8   0x....             LDR.N    R0,??DataTable11_32
+   \   000000BA   0x6900             LDR      R0,[R0, #+16]
+   \   000000BC   0x....             LDR.N    R1,??DataTable11_32
+   \   000000BE   0x6148             STR      R0,[R1, #+20]
+    473          }
+   \   000000C0   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+    474          void QD_init(void)
+    475          {
+   \                     QD_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+    476            static GPIO_InitTypeDef encoder_init_struct;
+    477            encoder_init_struct.GPIO_PTx = PTB;
+   \   00000002   0x....             LDR.N    R0,??DataTable11_40  ;; 0x400ff040
+   \   00000004   0x....             LDR.N    R1,??DataTable11_41
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+    478            encoder_init_struct.GPIO_Pins = GPIO_Pin18|GPIO_Pin19;
+   \   00000008   0xF45F 0x2040      MOVS     R0,#+786432
+   \   0000000C   0x....             LDR.N    R1,??DataTable11_41
+   \   0000000E   0x6048             STR      R0,[R1, #+4]
+    479            encoder_init_struct.GPIO_Dir = DIR_INPUT;        //输入
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x....             LDR.N    R1,??DataTable11_41
+   \   00000014   0x7308             STRB     R0,[R1, #+12]
+    480            encoder_init_struct.GPIO_PinControl = INPUT_PULL_UP;
+   \   00000016   0x2003             MOVS     R0,#+3
+   \   00000018   0x....             LDR.N    R1,??DataTable11_41
+   \   0000001A   0x6088             STR      R0,[R1, #+8]
+    481            LPLD_GPIO_Init(encoder_init_struct);
+   \   0000001C   0x....             LDR.N    R1,??DataTable11_41
+   \   0000001E   0xB084             SUB      SP,SP,#+16
+   \   00000020   0x4668             MOV      R0,SP
+   \   00000022   0x2214             MOVS     R2,#+20
+   \   00000024   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000028   0xBC0F             POP      {R0-R3}
+   \   0000002A   0x.... 0x....      BL       LPLD_GPIO_Init
+    482            
+    483            static FTM_InitTypeDef ftm_init_struct;
+    484            ftm_init_struct.FTM_Ftmx = FTM2;              //只有FTM1和FTM2有正交解码功能
+   \   0000002E   0x....             LDR.N    R0,??DataTable9_3  ;; 0x400b8000
+   \   00000030   0x....             LDR.N    R1,??DataTable11_42
+   \   00000032   0x6008             STR      R0,[R1, #+0]
+    485            ftm_init_struct.FTM_Mode = FTM_MODE_QD;       //正交解码功能
+   \   00000034   0x2004             MOVS     R0,#+4
+   \   00000036   0x....             LDR.N    R1,??DataTable11_42
+   \   00000038   0x7108             STRB     R0,[R1, #+4]
+    486            ftm_init_struct.FTM_QdMode = QD_MODE_PHAB;    //AB相输入模式
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x....             LDR.N    R1,??DataTable11_42
+   \   0000003E   0x7488             STRB     R0,[R1, #+18]
+    487            //初始化FTM
+    488            LPLD_FTM_Init(ftm_init_struct);
+   \   00000040   0x....             LDR.N    R1,??DataTable11_42
+   \   00000042   0xB084             SUB      SP,SP,#+16
+   \   00000044   0x4668             MOV      R0,SP
+   \   00000046   0x221C             MOVS     R2,#+28
+   \   00000048   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000004C   0xBC0F             POP      {R0-R3}
+   \   0000004E   0x.... 0x....      BL       LPLD_FTM_Init
+    489            //使能AB相输入通道
+    490            //PTB18引脚接A相输入、PTB19引脚接B相输入
+    491            LPLD_FTM_QD_Enable(FTM2, PTB18, PTB19);  
+   \   00000052   0x2233             MOVS     R2,#+51
+   \   00000054   0x2132             MOVS     R1,#+50
+   \   00000056   0x....             LDR.N    R0,??DataTable9_3  ;; 0x400b8000
+   \   00000058   0x.... 0x....      BL       LPLD_FTM_QD_Enable
+    492            
+    493          }
+   \   0000005C   0xBD07             POP      {R0-R2,PC}       ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??encoder_init_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+   \                     ??ftm_init_struct:
+   \   00000000                      DS8 28
+    494          
+
+   \                                 In section .text, align 2, keep-with-next
+    495          void Servo_Init( void )
+    496          {
+   \                     Servo_Init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+    497            static FTM_InitTypeDef ftm_init_struct;
+    498            ftm_init_struct.FTM_Ftmx = FTM1;	//使能FTM1通道
+   \   00000002   0x....             LDR.N    R0,??DataTable11_43  ;; 0x40039000
+   \   00000004   0x....             LDR.N    R1,??DataTable11_44
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+    499            ftm_init_struct.FTM_Mode = FTM_MODE_PWM;	//使能PWM模式
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable11_44
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+    500            ftm_init_struct.FTM_PwmFreq = 300;	//PWM频率300Hz
+   \   0000000E   0xF44F 0x7096      MOV      R0,#+300
+   \   00000012   0x....             LDR.N    R1,??DataTable11_44
+   \   00000014   0x6088             STR      R0,[R1, #+8]
+    501            LPLD_FTM_Init(ftm_init_struct);
+   \   00000016   0x....             LDR.N    R1,??DataTable11_44
+   \   00000018   0xB084             SUB      SP,SP,#+16
+   \   0000001A   0x4668             MOV      R0,SP
+   \   0000001C   0x221C             MOVS     R2,#+28
+   \   0000001E   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000022   0xBC0F             POP      {R0-R3}
+   \   00000024   0x.... 0x....      BL       LPLD_FTM_Init
+    502            LPLD_FTM_PWM_Enable(FTM1, //使用FTM1
+    503                                FTM_Ch0, //使能Ch0通道
+    504                                SerMid, //初始化角度0度    ,3600,2850,4350
+    505                                PTA8, 
+    506                                ALIGN_LEFT);   //脉宽左对齐                        
+   \   00000028   0x2028             MOVS     R0,#+40
+   \   0000002A   0x9000             STR      R0,[SP, #+0]
+   \   0000002C   0x2308             MOVS     R3,#+8
+   \   0000002E   0xF241 0x12F8      MOVW     R2,#+4600
+   \   00000032   0x2100             MOVS     R1,#+0
+   \   00000034   0x....             LDR.N    R0,??DataTable11_43  ;; 0x40039000
+   \   00000036   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+    507          }
+   \   0000003A   0xBD07             POP      {R0-R2,PC}       ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??ftm_init_struct_1:
+   \   00000000                      DS8 28
+    508          /*------------------初始化电机引脚------------------*/
+
+   \                                 In section .text, align 2, keep-with-next
+    509          void DianG_Init(void)
+    510          {
+   \                     DianG_Init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+    511            static  FTM_InitTypeDef FTM_Init;
+    512            FTM_Init.FTM_Ftmx=FTM0;
+   \   00000002   0x....             LDR.N    R0,??DataTable11_3  ;; 0x40038000
+   \   00000004   0x....             LDR.N    R1,??DataTable11_45
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+    513            FTM_Init.FTM_Mode=FTM_MODE_PWM;
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable11_45
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+    514            FTM_Init.FTM_PwmFreq=20000;
+   \   0000000E   0xF644 0x6020      MOVW     R0,#+20000
+   \   00000012   0x....             LDR.N    R1,??DataTable11_45
+   \   00000014   0x6088             STR      R0,[R1, #+8]
+    515           
+    516            FTM_Init.FTM_PwmDeadtimeVal=8;//电机频率20K 周期50us  取百分之5的死区 5*0.3/50=5%
+   \   00000016   0x2008             MOVS     R0,#+8
+   \   00000018   0x....             LDR.N    R1,??DataTable11_45
+   \   0000001A   0x7448             STRB     R0,[R1, #+17]
+    517            FTM_Init.FTM_PwmDeadtimeCfg=DEADTIME_CH45;
+   \   0000001C   0xF45F 0x1080      MOVS     R0,#+1048576
+   \   00000020   0x....             LDR.N    R1,??DataTable11_45
+   \   00000022   0x60C8             STR      R0,[R1, #+12]
+    518            FTM_Init.FTM_PwmDeadtimeDiv=DEADTIME_DIV16;//总线50M/16=3M  周期0.3us
+   \   00000024   0x2003             MOVS     R0,#+3
+   \   00000026   0x....             LDR.N    R1,??DataTable11_45
+   \   00000028   0x7408             STRB     R0,[R1, #+16]
+    519            
+    520            LPLD_FTM_Init(FTM_Init);          //使能PWM
+   \   0000002A   0x....             LDR.N    R1,??DataTable11_45
+   \   0000002C   0xB084             SUB      SP,SP,#+16
+   \   0000002E   0x4668             MOV      R0,SP
+   \   00000030   0x221C             MOVS     R2,#+28
+   \   00000032   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000036   0xBC0F             POP      {R0-R3}
+   \   00000038   0x.... 0x....      BL       LPLD_FTM_Init
+    521            LPLD_FTM_PWM_Enable(FTM0,FTM_Ch4,0,PTD4,ALIGN_LEFT);       
+   \   0000003C   0x2028             MOVS     R0,#+40
+   \   0000003E   0x9000             STR      R0,[SP, #+0]
+   \   00000040   0x2360             MOVS     R3,#+96
+   \   00000042   0x2200             MOVS     R2,#+0
+   \   00000044   0x2104             MOVS     R1,#+4
+   \   00000046   0x....             LDR.N    R0,??DataTable11_3  ;; 0x40038000
+   \   00000048   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+    522            LPLD_FTM_PWM_Enable(FTM0,FTM_Ch5,0,PTD5,ALIGN_LEFT);
+   \   0000004C   0x2028             MOVS     R0,#+40
+   \   0000004E   0x9000             STR      R0,[SP, #+0]
+   \   00000050   0x2361             MOVS     R3,#+97
+   \   00000052   0x2200             MOVS     R2,#+0
+   \   00000054   0x2105             MOVS     R1,#+5
+   \   00000056   0x....             LDR.N    R0,??DataTable11_3  ;; 0x40038000
+   \   00000058   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+    523            
+    524            LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch5,0);//未启动，输出0
+   \   0000005C   0x2200             MOVS     R2,#+0
+   \   0000005E   0x2105             MOVS     R1,#+5
+   \   00000060   0x....             LDR.N    R0,??DataTable11_3  ;; 0x40038000
+   \   00000062   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    525            LPLD_FTM_PWM_ChangeDuty(FTM0,FTM_Ch4,0);
+   \   00000066   0x2200             MOVS     R2,#+0
+   \   00000068   0x2104             MOVS     R1,#+4
+   \   0000006A   0x....             LDR.N    R0,??DataTable11_3  ;; 0x40038000
+   \   0000006C   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+    526            
+    527          }
+   \   00000070   0xBD07             POP      {R0-R2,PC}       ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??FTM_Init:
+   \   00000000                      DS8 28
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x41700000         DC32     0x41700000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x........         DC32     Turn_PID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \   00000000   0x41A00000         DC32     0x41a00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_3:
+   \   00000000   0x41200000         DC32     0x41200000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_4:
+   \   00000000   0x........         DC32     Turn_close_PID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_5:
+   \   00000000   0x42B40000         DC32     0x42b40000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_6:
+   \   00000000   0x453B8000         DC32     0x453b8000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \   00000000   0x........         DC32     NOpoint
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_1:
+   \   00000000   0x........         DC32     real_pointx
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_2:
+   \   00000000   0x........         DC32     rol
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_3:
+   \   00000000   0x........         DC32     turn_little
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_4:
+   \   00000000   0x........         DC32     turn_large
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0xE000E180         DC32     0xe000e180
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x........         DC32     Speed_PID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0x........         DC32     lr_lock
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \   00000000   0x........         DC32     bz_flag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_4:
+   \   00000000   0x........         DC32     Acenter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_5:
+   \   00000000   0x........         DC32     code_switch
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_6:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_7:
+   \   00000000   0x........         DC32     stop
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_8:
+   \   00000000   0x........         DC32     bz_end
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_9:
+   \   00000000   0x43FE226C         DC32     0x43fe226c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_10:
+   \   00000000   0x43FE2270         DC32     0x43fe2270
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_11:
+   \   00000000   0x43FE1A20         DC32     0x43fe1a20
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_12:
+   \   00000000   0x43FE1A24         DC32     0x43fe1a24
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_13:
+   \   00000000   0x........         DC32     zero_lock1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_14:
+   \   00000000   0x........         DC32     car_stop_flag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     ??pit0_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x........         DC32     real_pointy
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_2:
+   \   00000000   0x........         DC32     move_flag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_3:
+   \   00000000   0x........         DC32     zero_lock2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_4:
+   \   00000000   0x........         DC32     s5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_5:
+   \   00000000   0x........         DC32     i
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \   00000000   0x........         DC32     dc_judge
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_1:
+   \   00000000   0x........         DC32     ph_lock1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_2:
+   \   00000000   0x........         DC32     ph_lock2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_3:
+   \   00000000   0x400B8000         DC32     0x400b8000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x........         DC32     ss
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \   00000000   0x........         DC32     qd_result
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     SetCenterX
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \   00000000   0x........         DC32     speed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_2:
+   \   00000000   0x........         DC32     SetSpeed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_3:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_4:
+   \   00000000   0x........         DC32     turnspeed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_5:
+   \   00000000   0x........         DC32     sflag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_6:
+   \   00000000   0x........         DC32     acce
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_7:
+   \   00000000   0x........         DC32     highspeed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_8:
+   \   00000000   0x........         DC32     lowspeed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_9:
+   \   00000000   0x........         DC32     brake_start
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_10:
+   \   00000000   0x400FF000         DC32     0x400ff000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_11:
+   \   00000000   0x........         DC32     bz_speed
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_12:
+   \   00000000   0x........         DC32     del
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_13:
+   \   00000000   0x........         DC32     rph1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_14:
+   \   00000000   0x........         DC32     lph1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_15:
+   \   00000000   0x........         DC32     rph2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_16:
+   \   00000000   0x........         DC32     lph2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_17:
+   \   00000000   0x........         DC32     rph3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_18:
+   \   00000000   0x........         DC32     lph3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_19:
+   \   00000000   0x........         DC32     rph4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_20:
+   \   00000000   0x........         DC32     lph4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_21:
+   \   00000000   0x........         DC32     rph5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_22:
+   \   00000000   0x........         DC32     lph5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_23:
+   \   00000000   0x........         DC32     rph6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_24:
+   \   00000000   0x........         DC32     lph6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_25:
+   \   00000000   0x........         DC32     rph7
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_26:
+   \   00000000   0x........         DC32     lph7
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_27:
+   \   00000000   0xC1A00000         DC32     0xc1a00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_28:
+   \   00000000   0x461C1800         DC32     0x461c1800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_29:
+   \   00000000   0xC61C17FF         DC32     0xc61c17ff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_30:
+   \   00000000   0xC61C1800         DC32     0xc61c1800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_31:
+   \   00000000   0x........         DC32     real_pointx
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_32:
+   \   00000000   0x........         DC32     Turn_PID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_33:
+   \   00000000   0x41700000         DC32     0x41700000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_34:
+   \   00000000   0xC16FFFFF         DC32     0xc16fffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_35:
+   \   00000000   0x........         DC32     Turn_close_PID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_36:
+   \   00000000   0x458FC000         DC32     0x458fc000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_37:
+   \   00000000   0x45ABE001         DC32     0x45abe001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_38:
+   \   00000000   0x45ABE000         DC32     0x45abe000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_39:
+   \   00000000   0x45674000         DC32     0x45674000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_40:
+   \   00000000   0x400FF040         DC32     0x400ff040
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_41:
+   \   00000000   0x........         DC32     ??encoder_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_42:
+   \   00000000   0x........         DC32     ??ftm_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_43:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_44:
+   \   00000000   0x........         DC32     ??ftm_init_struct_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_45:
+   \   00000000   0x........         DC32     ??FTM_Init
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   A_Speed_PID_Cal
+         8   -> __aeabi_fadd
+         8   -> __aeabi_fmul
+         8   -> __aeabi_fsub
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+      32   DianG_Init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_ChangeDuty
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+       0   Middle_Point_Configure
+       0   NVIC_DisableIRQ
+       0   PID_Init
+      32   QD_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_QD_Enable
+        16   -> LPLD_GPIO_Init
+        32   -> __aeabi_memcpy4
+      32   Servo_Init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+       8   SetSpeed_Configuration
+         8   -> LPLD_GPIO_Output_b
+       8   Speed_PID_Cal
+         8   -> __aeabi_fadd
+         8   -> __aeabi_fdiv
+         8   -> __aeabi_fmul
+         8   -> __aeabi_fsub
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+       8   Turn_PID_Cal
+         8   -> __aeabi_fadd
+         8   -> __aeabi_fmul
+         8   -> __aeabi_fsub
+         8   -> __aeabi_i2f
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+       8   pit0_isr
+         8   -> Calculate_Middle_Point
+         8   -> LPLD_FTM_ClearCounter
+         8   -> LPLD_FTM_GetCounter
+         8   -> LPLD_FTM_PWM_ChangeDuty
+         8   -> Middle_Point_Configure
+         8   -> SetSpeed_Configuration
+         8   -> Speed_PID_Cal
+         8   -> Turn_PID_Cal
+         8   -> __aeabi_f2uiz
+         8   -> __aeabi_i2f
+         8 __aeabi_cfrcmple
+      24   pit_init
+         8   -> LPLD_PIT_Init
+         8   -> NVIC_DisableIRQ
+        24   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_10
+       4  ??DataTable11_11
+       4  ??DataTable11_12
+       4  ??DataTable11_13
+       4  ??DataTable11_14
+       4  ??DataTable11_15
+       4  ??DataTable11_16
+       4  ??DataTable11_17
+       4  ??DataTable11_18
+       4  ??DataTable11_19
+       4  ??DataTable11_2
+       4  ??DataTable11_20
+       4  ??DataTable11_21
+       4  ??DataTable11_22
+       4  ??DataTable11_23
+       4  ??DataTable11_24
+       4  ??DataTable11_25
+       4  ??DataTable11_26
+       4  ??DataTable11_27
+       4  ??DataTable11_28
+       4  ??DataTable11_29
+       4  ??DataTable11_3
+       4  ??DataTable11_30
+       4  ??DataTable11_31
+       4  ??DataTable11_32
+       4  ??DataTable11_33
+       4  ??DataTable11_34
+       4  ??DataTable11_35
+       4  ??DataTable11_36
+       4  ??DataTable11_37
+       4  ??DataTable11_38
+       4  ??DataTable11_39
+       4  ??DataTable11_4
+       4  ??DataTable11_40
+       4  ??DataTable11_41
+       4  ??DataTable11_42
+       4  ??DataTable11_43
+       4  ??DataTable11_44
+       4  ??DataTable11_45
+       4  ??DataTable11_5
+       4  ??DataTable11_6
+       4  ??DataTable11_7
+       4  ??DataTable11_8
+       4  ??DataTable11_9
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+       4  ??DataTable5_6
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_10
+       4  ??DataTable7_11
+       4  ??DataTable7_12
+       4  ??DataTable7_13
+       4  ??DataTable7_14
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+       4  ??DataTable7_5
+       4  ??DataTable7_6
+       4  ??DataTable7_7
+       4  ??DataTable7_8
+       4  ??DataTable7_9
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+       4  ??DataTable8_5
+       4  ??DataTable9
+       4  ??DataTable9_1
+       4  ??DataTable9_2
+       4  ??DataTable9_3
+     162  A_Speed_PID_Cal
+       1  Acenter
+     114  DianG_Init
+      28  FTM_Init
+     100  L_R_judge
+    1158  Middle_Point_Configure
+      22  NVIC_DisableIRQ
+     178  PID_Init
+      94  QD_init
+      60  Servo_Init
+       1  SetCenterX
+       2  SetSpeed
+     536  SetSpeed_Configuration
+      44  Speed_PID
+     252  Speed_PID_Cal
+      44  Turn_PID
+     194  Turn_PID_Cal
+      44  Turn_close_PID
+       2  acce
+       4  atime
+       1  brake_start
+       1  bz_end
+       1  bz_flag
+       2  bz_speed
+       1  car_stop_flag
+       2  dc_judge
+       1  del
+      20  encoder_init_struct
+      28  ftm_init_struct
+      28  ftm_init_struct
+       2  highspeed
+       1  i
+       2  lowspeed
+       1  lph1
+       1  lph2
+       1  lph3
+       1  lph4
+       1  lph5
+       1  lph6
+       1  lph7
+       1  lr_lock
+       1  passflag
+       1  ph_lock1
+       1  ph_lock2
+      20  pit0_init_struct
+     910  pit0_isr
+      56  pit_init
+       2  qd_result
+       1  rol
+       1  rph1
+       1  rph2
+       1  rph3
+       1  rph4
+       1  rph5
+       1  rph6
+       1  rph7
+      20  s5
+       1  sflag
+       2  speed
+       2  ss
+       2  stop
+       8  turn_large
+       8  turn_little
+       2  turnspeed
+       1  xbnum
+       1  zero_lock1
+       1  zero_lock2
+
+ 
+   412 bytes in section .bss
+    37 bytes in section .data
+ 4 076 bytes in section .text
+ 
+ 4 076 bytes of CODE memory
+   449 bytes of DATA memory
+
+Errors: none
+Warnings: 3

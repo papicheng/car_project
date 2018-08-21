@@ -1,0 +1,13 @@
+"D:\IAR\arm\bin\armproc.dll" 
+
+"D:\IAR\arm\bin\armjlink2.dll" 
+
+"G:\机器人团队\Freescale\2016.10.22培训资料\库及例程包\LPLD_OSKinetis_V3\project\C_cong0820\iar\RAM\Exe\C_cong0820_K60DZ10.out" 
+
+--plugin "D:\IAR\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR\arm\config\debugger\Freescale\Kxx.dmac" 
+
+
+
+

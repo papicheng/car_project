@@ -1,0 +1,262 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       23/Aug/2017  10:35:09
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\infrared.c
+#    Command line =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\infrared.c
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -lB
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List
+#        -o
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "E:\IAR Systems\Embedded
+#        Workbench 7.3\arm\INC\c\DLib_Config_Normal.h" -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\app\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\CPU\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\LPLD\FUNC\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\common\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\driver\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\..\..\..\lib\USB\class\
+#        -Ol -I "E:\IAR Systems\Embedded Workbench 7.3\arm\CMSIS\Include\" -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\List\infrared.lst
+#    Object file  =  
+#        G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\iar\FLASH\Obj\infrared.o
+#
+###############################################################################
+
+G:\study\car\program\lib_and_example\LPLD_OSKinetis_V3\project\Car_B_main_2017_8_23\app\infrared.c
+      1          #include "infrared.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void NVIC_DisableIRQ(IRQn_Type)
+   \                     NVIC_DisableIRQ: (+1)
+   \   00000000   0x2101             MOVS     R1,#+1
+   \   00000002   0xF010 0x021F      ANDS     R2,R0,#0x1F
+   \   00000006   0x4091             LSLS     R1,R1,R2
+   \   00000008   0x....             LDR.N    R2,??DataTable3  ;; 0xe000e180
+   \   0000000A   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000000C   0x0940             LSRS     R0,R0,#+5
+   \   0000000E   0xF842 0x1020      STR      R1,[R2, R0, LSL #+2]
+   \   00000012   0x4770             BX       LR               ;; return
+      2          #include "common.h"
+      3          #include "timer.h"
+      4          #include "camera_test.h"
+
+   \                                 In section .bss, align 1
+      5          uint8 pass=0;//当前信标序号
+   \                     pass:
+   \   00000000                      DS8 1
+      6          
+
+   \                                 In section .bss, align 1
+      7          uint8 move_flag=0;//发车标志(输出PWM),发车前已开始计算电机PWM
+   \                     move_flag:
+   \   00000000                      DS8 1
+      8          
+
+   \                                 In section .text, align 2, keep-with-next
+      9          void infrared_init(void)
+     10          {
+   \                     infrared_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     11            static GPIO_InitTypeDef Count_Port_init;
+     12            Count_Port_init.GPIO_PTx = PTA; 
+   \   00000002   0x....             LDR.N    R0,??DataTable3_1  ;; 0x400ff000
+   \   00000004   0x....             LDR.N    R1,??DataTable3_2
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     13            Count_Port_init.GPIO_Pins = GPIO_Pin13;
+   \   00000008   0xF44F 0x5000      MOV      R0,#+8192
+   \   0000000C   0x....             LDR.N    R1,??DataTable3_2
+   \   0000000E   0x6048             STR      R0,[R1, #+4]
+     14            Count_Port_init.GPIO_Dir = DIR_INPUT;
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x....             LDR.N    R1,??DataTable3_2
+   \   00000014   0x7308             STRB     R0,[R1, #+12]
+     15            Count_Port_init.GPIO_PinControl=IRQC_RI|INPUT_PULL_DOWN;//  上升沿中断                        
+   \   00000016   0x....             LDR.N    R0,??DataTable3_3  ;; 0x90002
+   \   00000018   0x....             LDR.N    R1,??DataTable3_2
+   \   0000001A   0x6088             STR      R0,[R1, #+8]
+     16            Count_Port_init.GPIO_Isr =infrared_count; 
+   \   0000001C   0x.... 0x....      ADR.W    R0,infrared_count
+   \   00000020   0x....             LDR.N    R1,??DataTable3_2
+   \   00000022   0x6108             STR      R0,[R1, #+16]
+     17            LPLD_GPIO_Init(Count_Port_init);
+   \   00000024   0x....             LDR.N    R1,??DataTable3_2
+   \   00000026   0xB084             SUB      SP,SP,#+16
+   \   00000028   0x4668             MOV      R0,SP
+   \   0000002A   0x2214             MOVS     R2,#+20
+   \   0000002C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000030   0xBC0F             POP      {R0-R3}
+   \   00000032   0x.... 0x....      BL       LPLD_GPIO_Init
+     18            disable_irq(PORTA_IRQn);
+   \   00000036   0x2057             MOVS     R0,#+87
+   \   00000038   0x.... 0x....      BL       NVIC_DisableIRQ
+     19            
+     20          }
+   \   0000003C   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \                     ??Count_Port_init:
+   \   00000000                      DS8 20
+
+   \                                 In section .text, align 4, keep-with-next
+     21          void infrared_count (void)  //红外计数
+     22          {
+     23            if(LPLD_GPIO_IsPinxExt(PORTA, GPIO_Pin13))
+   \                     infrared_count: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable3_4  ;; 0x400490a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x0480             LSLS     R0,R0,#+18
+   \   00000006   0xD50B             BPL.N    ??infrared_count_0
+     24            {
+     25              LPLD_GPIO_ClearIntFlag(PORTA);
+   \   00000008   0xF05F 0x30FF      MOVS     R0,#-1
+   \   0000000C   0x....             LDR.N    R1,??DataTable3_4  ;; 0x400490a0
+   \   0000000E   0x6008             STR      R0,[R1, #+0]
+     26              pass++;
+   \   00000010   0x....             LDR.N    R0,??DataTable3_5
+   \   00000012   0x7800             LDRB     R0,[R0, #+0]
+   \   00000014   0x1C40             ADDS     R0,R0,#+1
+   \   00000016   0x....             LDR.N    R1,??DataTable3_5
+   \   00000018   0x7008             STRB     R0,[R1, #+0]
+     27              passflag=1;
+   \   0000001A   0x2001             MOVS     R0,#+1
+   \   0000001C   0x....             LDR.N    R1,??DataTable3_6
+   \   0000001E   0x7008             STRB     R0,[R1, #+0]
+     28              //LPLD_UART_PutChar(UART4,pass);//发送过信标数
+     29            }
+     30              
+     31          }
+   \                     ??infrared_count_0: (+1)
+   \   00000020   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+     32          void start(void)//发车程序
+     33          {
+     34            while(NOpoint);
+   \                     start: (+1)
+   \                     ??start_0: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable3_7
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD1FB             BNE.N    ??start_0
+     35            move_flag=1;
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable3_8
+   \   0000000C   0x7008             STRB     R0,[R1, #+0]
+     36            
+     37          }
+   \   0000000E   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0xE000E180         DC32     0xe000e180
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \   00000000   0x400FF000         DC32     0x400ff000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \   00000000   0x........         DC32     ??Count_Port_init
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \   00000000   0x00090002         DC32     0x90002
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \   00000000   0x400490A0         DC32     0x400490a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \   00000000   0x........         DC32     pass
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_6:
+   \   00000000   0x........         DC32     passflag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_7:
+   \   00000000   0x........         DC32     NOpoint
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_8:
+   \   00000000   0x........         DC32     move_flag
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   NVIC_DisableIRQ
+       0   infrared_count
+      24   infrared_init
+         8   -> LPLD_GPIO_Init
+         8   -> NVIC_DisableIRQ
+        24   -> __aeabi_memcpy4
+       0   start
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       4  ??DataTable3_7
+       4  ??DataTable3_8
+      20  Count_Port_init
+      20  NVIC_DisableIRQ
+      34  infrared_count
+      62  infrared_init
+       1  move_flag
+       1  pass
+      16  start
+
+ 
+  22 bytes in section .bss
+ 168 bytes in section .text
+ 
+ 168 bytes of CODE memory
+  22 bytes of DATA memory
+
+Errors: none
+Warnings: 3
